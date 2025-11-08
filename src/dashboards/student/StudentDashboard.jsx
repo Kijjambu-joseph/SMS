@@ -1,0 +1,24 @@
+import React from "react";
+import Header from "./Header";
+import SideBar from "./SideBar";
+import Banner from "./Banner";
+import OverViewCards from "./OverViewCards";
+
+function StudentDashboard() {
+  return (
+    <>
+        <Header />
+        <div className="Home" style={{display: "flex", gap: "20px"}}>
+            <SideBar />
+            <div style={{ width:"100%"}}>
+                <Banner />
+                <OverViewCards />
+            </div>
+        </div>
+
+
+    </>
+  );
+}
+
+export default StudentDashboard;
