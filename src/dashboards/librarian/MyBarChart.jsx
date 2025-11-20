@@ -1,0 +1,43 @@
+import React from 'react';
+    import { Chart as ChartJS, CategoryScale,LineElement,PointElement, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+    import { Bar, Line } from 'react-chartjs-2';
+
+    ChartJS.register(
+      CategoryScale,
+      LinearScale,
+      BarElement,
+      LineElement,
+      Title,
+      Tooltip,
+      Legend,
+      PointElement
+    );
+
+    const MyBarChart = () => {
+      const data = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
+          {
+            label: 'Sales',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      const options = {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Monthly Sales Data',
+          },
+        },
+      };
+
+      return <Line data={data} options={options} />;
+    };
+
+    export default MyBarChart;

@@ -3,6 +3,7 @@ import Header from "./Header";
 import SideBar from "./SideBar";
 import Banner from "./Banner";
 import OverViewCards from "./OverViewCards";
+import Charts from "./Charts";
 
 function StudentDashboard() {
   return (
@@ -13,6 +14,7 @@ function StudentDashboard() {
             <div style={{ width:"100%"}}>
                 <Banner />
                 <OverViewCards />
+                <Charts />
             </div>
         </div>
 

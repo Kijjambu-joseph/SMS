@@ -1,12 +1,27 @@
 import React from "react";
 import StudentDashboard from "./dashboards/student/StudentDashboard";
+import { Routes,Route,BrowserRouter } from "react-router-dom";
+import Libriarian from "./dashboards/librarian/LibrarianDashboard";
+import LoginForm from "/src/auth/Login.jsx"
+import StudentRegistration from '/src/auth/StudentRegistration.jsx'
+import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
 
 
 function App() {
 
   return (
     <>
-      <StudentDashboard />
+  
+  <BrowserRouter>
+      <Routes>
+          <Route path="/student" element={<StudentDashboard />}/>
+          <Route path="/librarian" element={<Libriarian />} />
+          <Route path="/login" element={< LoginForm />} />
+          <Route path="/student/Reg" element={<StudentRegistration />} />
+          <Route path="/teachers/Reg" element={<TeacherRegistration />} />
+      </Routes>
+  </BrowserRouter>
+
     </>
   )
 }
