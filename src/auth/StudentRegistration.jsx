@@ -1,7 +1,11 @@
 import React from "react";
+// import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 
 function StudentRegistration(){
+
+    // const [formData, setFormData] = useState({})
+
     return(
         <div className="Student-reg">
             <form action="Post" className="student-reg-content">
@@ -253,7 +257,29 @@ function StudentRegistration(){
                     </div>
                 </fieldset>
 
+                <fieldset>
+                    <legend>Attachments</legend>
+                    <div className="bio-infor-container">
+                        <div className="bio-content">
+                            
+                            <div className="input-container">
+                                <label htmlFor="passport">Passport photo</label>
+                                <input type="file" accept="image/*" id="passport" required  />
+                                <p></p>
+                            </div>
 
+                            <div className="input-container">
+                                <label htmlFor="Birth-cert">Birth Certificate</label>
+                                <input type="file" accept=".pdf" id="Birth-cert" required  />
+                                <p></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <button className="bg-blue-500 px-4 w-50 h-10 text-white">Register Student</button>
             </form>
         </div>
     );
