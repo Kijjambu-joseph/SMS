@@ -5,6 +5,7 @@ import Libriarian from "./dashboards/librarian/LibrarianDashboard";
 import LoginForm from "/src/auth/Login.jsx"
 import StudentRegistration from '/src/auth/StudentRegistration.jsx'
 import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
+import ParentDashboard from "/src/dashboards/parent/ParentDashboard.jsx"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={< LoginForm />} />
           <Route path="/student/Reg" element={<StudentRegistration />} />
           <Route path="/teachers/Reg" element={<TeacherRegistration />} />
+          <Route path="/parent" element={<ParentDashboard />}/>
       </Routes>
   </BrowserRouter>
 
