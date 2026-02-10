@@ -1,93 +1,54 @@
-// BarChart.js
-import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import React from "react";
+import './Body.css';
 
-// Register the required Chart.js components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+function Body (){
+      return(
+        <div className="Body-container">
 
-const Body = () => {
-  // Define the chart data
-  const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'Monthly Sales', // Label for the dataset
-        data: [65, 59, 80, 81, 56, 55, 40], // The actual data points
-        backgroundColor: [ // Array of colors for each bar
-          'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(255, 206, 86, 0.6)',
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)',
-          'rgba(199, 199, 199, 0.6)',
-        ],
-        borderColor: [ // Array of border colors for each bar
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(199, 199, 199, 1)',
-        ],
-        borderWidth: 1, // Border width for the bars
-      },
-    ],
-  };
+          <div className="Admin-activities">
+            <h1>Recent Activities</h1>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:"20px"}}>
+              <h2>New student enrolled</h2>
+              <p>2 hours ago</p>
+            </div>
+            <hr />
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:"20px"}}>
+              <h2>Grade Submitted for Math 101 </h2>
+              <p>1 day ago</p>
+            </div>
+            <hr />
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:"20px"}}>
+              <h2>Attendance Marked for Today</h2>
+              <p>6 hours ago</p>
+            </div>
+            <hr />
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:"20px"}}>
+              <h2>Teacher Assigned</h2>
+              <p>3 hours ago</p>
+            </div>
+            <hr />
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:"20px"}}>
+              <h2>New Annoucement posted</h2>
+              <p>5 days ago</p>
+            </div>
+            <hr />
+          </div>
 
-  // Define the chart options
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false, // Allows the chart to fill the container size
-    plugins: {
-      legend: {
-        position: 'top', // Position of the legend
-      },
-      title: {
-        display: true,
-        text: 'Monthly Sales Data', // Chart title
-      },
-    },
-    scales: {
-      y: {
-        beginAtZero: true, // Start the Y-axis at 0
-        title: {
-          display: true,
-          text: 'Sales Amount',
-        },
-      },
-      x: {
-        title: {
-          display: true,
-          text: 'Month',
-        },
-      },
-    },
-  };
+          <div className="Admin-actions">
+            <h1>Quick Actions</h1>
+            <div className="Admin-btn001">
+              <button >Add New Student</button>
+            </div>
 
-  return (
-    // Set a container for consistent sizing in React
-    <div style={{ width: '600px', height: '400px', padding: '20px' }}>
-      <Bar data={data} options={options} />
-    </div>
-  );
-};
+            <div className="Admin-buttons">
+              <button>Add New Teacher</button>
+            </div>
 
+            <div className="Admin-btn002">
+              <button >View Timetable</button>
+            </div>
+          </div>
+        </div>
+      )
+}
 export default Body;

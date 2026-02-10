@@ -1,5 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import './StudentRegistration.css'
 
 function StudentRegistration(){
     return(
@@ -253,7 +254,17 @@ function StudentRegistration(){
                     </div>
                 </fieldset>
 
-
+                <div className="register-student" >
+                    <div></div>
+                    <div className="register-student-btn">
+                        <div className="register-student-btn01">
+                            <button>Clear Form</button>
+                        </div>
+                        <div className="register-student-btn02">
+                            <button>Register Student</button>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     );

@@ -3,7 +3,8 @@ import Header from "./Header";
 import SideBar from "./SideBar";
 import FrontBanner from "./FrontBanner";
 import LibrarianCards from "./LibrarianCards";
-import MyBarChart from "./MyBarChart";
+import PieChart from "./PieChart";
+import LibrarianActions from "./LibrarianActions";
 
 
  function LibririanDashboard(){
@@ -13,10 +14,13 @@ import MyBarChart from "./MyBarChart";
                 <Header/>
                 <div style={{display:"flex"}}>
                     <SideBar/>
-                   <div className=" Detailsview">
+                   <div style={{marginLeft:"20px"}}>
                         <FrontBanner/>
                         <LibrarianCards/>
-                        <MyBarChart/>
+                        <div style={{display:"flex"}}>
+                            <LibrarianActions/>
+                            <PieChart/>
+                        </div>
                    </div>
                 </div>
             </div>
