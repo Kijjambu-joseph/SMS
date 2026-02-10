@@ -258,19 +258,6 @@ function StudentRegistration(){
                     </div>
                 </fieldset>
 
-<<<<<<< HEAD
-                <div className="register-student" >
-                    <div></div>
-                    <div className="register-student-btn">
-                        <div className="register-student-btn01">
-                            <button>Clear Form</button>
-                        </div>
-                        <div className="register-student-btn02">
-                            <button>Register Student</button>
-                        </div>
-                    </div>
-                </div>
-=======
                 <fieldset>
                     <legend>Attachments</legend>
                     <div className="bio-infor-container">
@@ -294,7 +281,6 @@ function StudentRegistration(){
                 </fieldset>
 
                 <button className="bg-blue-500 px-4 w-50 h-10 text-white">Register Student</button>
->>>>>>> dbdaee0632722f73a38ea57799d12bffa264ed28
             </form>
         </div>
     );
