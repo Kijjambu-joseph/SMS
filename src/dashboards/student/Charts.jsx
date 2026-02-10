@@ -84,9 +84,11 @@ const Charts = () => {
 
   return (
     // Set a container for consistent sizing in React
-    <div style={{ width: '100%', height: '400px', padding: '20px' }}>
+   <div style={{width:"100%",height:"450px",boxShadow:"0 0 5px gray",marginTop:"20px",borderRadius:"10px"}}>
+     <div style={{ width: '100%', height: '400px', padding: '20px' }}>
       <Bar data={data} options={options} />
     </div>
+   </div>
   );
 };
 

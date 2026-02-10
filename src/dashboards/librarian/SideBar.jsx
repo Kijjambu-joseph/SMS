@@ -1,5 +1,6 @@
 import React from "react";
 import KyuLogo from '/src/assets/images-removebg-preview.png';
+import './SideBar.css'
 
 function SideBar(){
     return(
@@ -9,41 +10,45 @@ function SideBar(){
             </div>
         
                 
-                <h1 style={{fontSize:"20px",textAlign:"center",color:"#ffffff",marginBottom:"20px"}}> LibrarianDashboard</h1>
-        
+                <h1 style={{fontSize:"15px",textAlign:"center",color:"black",marginBottom:"20px",fontWeight:"bold"}}> LibrarianDashboard</h1>
+                    <hr />
             <div className="sidelinks">
-                <i class="fa-solid fa-house-user"></i>
+                <i class="fa-solid fa-house-user" id="librarian-icon-sidebar"></i>
                 <a href="">Dashboard</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-book-open"></i>
+                <i class="fa-solid fa-book-open" id="librarian-icon-sidebar"></i>
                 <a href="">Books Available</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-tower-observation"></i>
+                <i class="fa-solid fa-tower-observation" id="librarian-icon-sidebar"></i>
                 <a href="">Reservations</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-computer"></i>
+                <i class="fa-solid fa-computer" id="librarian-icon-sidebar"></i>
                 <a href="">Circulation Desk</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-warehouse"></i>
+                <i class="fa-solid fa-warehouse" id="librarian-icon-sidebar"></i>
                 <a href="">Inventory</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-chart-simple"></i>
+                <i class="fa-solid fa-chart-simple" id="librarian-icon-sidebar"></i>
                 <a href="">Reports and Analytics</a>
             </div>
 
             <div className="sidelinks">
-                <i class="fa-solid fa-circle-info"></i>
-                <a href="">Help</a>
+                <i class="fa-solid fa-circle-info" id="librarian-icon-sidebar"></i>
+                <a href="">logout</a>
+            </div>
+            <hr />
+            <div style={{color:"black"}}>
+                <h2>librarian@gmail.com</h2>
             </div>
         </div>
     )

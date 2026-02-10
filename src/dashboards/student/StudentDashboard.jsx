@@ -11,7 +11,7 @@ function StudentDashboard() {
         <Header />
         <div className="Home" style={{display: "flex", gap: "20px"}}>
             <SideBar />
-            <div style={{ width:"100%"}}>
+            <div style={{ width:"100%",padding:"20px"}}>
                 <Banner />
                 <OverViewCards />
                 <Charts />

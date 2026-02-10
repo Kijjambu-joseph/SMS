@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-  
   <BrowserRouter>
       <Routes>
           <Route path="/student" element={<StudentDashboard />}/>
