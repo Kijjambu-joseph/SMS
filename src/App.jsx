@@ -4,7 +4,7 @@ import { Routes,Route,BrowserRouter } from "react-router-dom";
 import Libriarian from "./dashboards/librarian/LibrarianDashboard";
 import LoginForm from "/src/auth/Login.jsx"
 import StudentRegistration from '/src/auth/StudentRegistration.jsx'
-// import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
+import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
 import ParentDashboard from "/src/dashboards/parent/ParentDashboard.jsx"
 import AdminDashboard from "/src/dashboards/admin/AdminDashboard.jsx"
 
