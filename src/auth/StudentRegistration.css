@@ -97,3 +97,143 @@
     color: white;
     cursor: pointer;
 }
+
+ .student-reg-content .btn1{
+        width: 150px;
+        height: 50px;
+        border: 1px var(--other-color) solid;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(63, 63, 221);
+        color: white;
+    }
+
+    .student-reg-content .btn2{
+        width: 150px;
+        height: 50px;
+        border: 1px var(--other-color) solid;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+@media screen and (max-width:915px) {
+    .Student-reg{
+        width: 100vw;
+        height: auto;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        /* background-color: rebeccapurple; */
+    }
+
+    .student-reg-content{
+        width: 90%;
+        height: auto;
+        /* background-color: red; */
+    }
+
+    .student-reg-content fieldset{
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px var(--other-color) solid;
+    }
+
+
+    .student-reg-content fieldset legend{
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+    .bio-infor-container{
+        width: 100%;
+        height: auto;
+        /* background-color: gray; */
+    }
+
+    .bio-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: space-between; */
+        margin-bottom: 20px;
+        /* background-color: yellow; */
+    }
+
+    .input-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+
+    .input-container label{
+        width: 100%;
+        font-size: 1.3em;
+        /* background-color: palevioletred; */
+    }
+
+    .input-container input{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px var(--other-color) solid;
+        font-size: 1.2em;
+    }
+
+
+    .input-container select{
+        height: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px var(--other-color) solid;
+        font-size: 1.2em;
+    }
+
+
+     .student-reg-content .btn1{
+        width: 150px;
+        height: 50px;
+        border: 1px var(--other-color) solid;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(63, 63, 221);
+        color: white;
+    }
+
+    .student-reg-content .btn2{
+        width: 150px;
+        height: 50px;
+        border: 1px var(--other-color) solid;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+     .student-reg-content fieldset legend{
+        font-size: 1em;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+    
+}
+
+@media screen and (max-width:414px) {
+     .student-reg-content fieldset legend{
+        font-size: 0.9em;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+}
