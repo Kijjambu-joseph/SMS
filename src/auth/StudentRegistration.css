@@ -1,6 +1,17 @@
 
 
 /* STUDENT REGISTRATION FORM CSS STYL */
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
 
 .Student-reg{
     width: 100vw;
@@ -28,6 +39,7 @@
     font-size: 2em;
     font-weight: 600;
     margin-left: 50px;
+    color: var(--primary-color);
 }
 
 .bio-infor-container{
@@ -54,6 +66,7 @@
 .input-container label{
     width: 100%;
     font-size: 1.3em;
+    color: var(--primary-color);
 }
 
 .input-container input{
@@ -64,6 +77,11 @@
     border: 1px var(--other-color) solid;
     font-size: 1em;
 }
+
+.input-container input:focus{
+        /* border-radius: 5px; */
+        outline: 2px solid var(--primary-color);
+    }
 
 .input-container select{
     height: 40px;
@@ -82,21 +100,7 @@
     display: flex;
     gap: 10px;
 }
-.register-student-btn01 button{
-    width: 250px;
-    height: 50px;
-    border: 1px var(--other-color) solid;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.register-student-btn02 button{
-    width: 250px;
-    height: 50px;
-    background-color:rgb(46, 101, 239);
-    border-radius: 10px;
-    color: white;
-    cursor: pointer;
-}
+
 
  .student-reg-content .btn1{
         width: 150px;
@@ -104,7 +108,7 @@
         border: 1px var(--other-color) solid;
         border-radius: 10px;
         cursor: pointer;
-        background-color: rgb(63, 63, 221);
+        background-color: var(--primary-color);
         color: white;
     }
 
@@ -204,7 +208,7 @@
         border: 1px var(--other-color) solid;
         border-radius: 10px;
         cursor: pointer;
-        background-color: rgb(63, 63, 221);
+        background-color: var(--primary-color);
         color: white;
     }
 
@@ -226,6 +230,18 @@
         font-weight: 600;
         margin-left: 50px;
     }
+
+     .input-container label{
+        width: 100%;
+        font-size: 1em;
+        /* background-color: palevioletred; */
+    }
+
+    .input-container input{
+        height: 40px;
+        font-size: 1em;
+    }
+
 
     
 }

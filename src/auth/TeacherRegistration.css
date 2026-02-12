@@ -3,6 +3,7 @@
 
 /* TEACHERS REGISTRATION FORM CSS */
 
+
 .teacher-Reg-board fieldset{
   border-radius: 10px;
   border: 2px var(--other-color) solid;
@@ -18,6 +19,7 @@
   height: auto;
   padding: 30px;
   /* display: grid; */
+
 }
 
 .Teachers-input-container input{
