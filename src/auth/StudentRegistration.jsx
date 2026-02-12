@@ -280,7 +280,10 @@ function StudentRegistration(){
                     </div>
                 </fieldset>
 
-                <button className="bg-blue-500 px-4 w-50 h-10 text-white">Register Student</button>
+                <div className=" w-100/100 flex items-center  gap-2">
+                    <button className="btn1">Register Student</button>
+                    <button className="btn2">Clear Form</button>
+                </div>
             </form>
         </div>
     );
