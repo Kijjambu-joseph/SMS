@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
-import kyuLogo from '/src/assets/images-removebg-preview.png'
+import kyuLogo from '/src/assets/Logo.png'
 import './Login.css'
 
 
@@ -11,7 +11,7 @@ function LoginForm(){
                 <div className="Kyu">
                     <img src={kyuLogo} alt="" className="KyuLogo" />
                 </div>
-                <h1>Login Form</h1>
+                <h1>Sign In</h1>
                 <div className="login-inputs">
 
                     <div className="uesr-name">
@@ -31,8 +31,8 @@ function LoginForm(){
                     </div>
                     
                     <button className="login-btn">Login</button>
-                    <p>Forgot password? <Link to='/forgotPassword' id ="reset" >Click here</Link></p>
-                    <p>Don't have account?<Link to='/student/Reg' id="reset">Register</Link></p>
+                    <p>Forgot password? <Link to='/forgotPassword'  className="addressed" >Click here</Link> </p>
+                    <p>Don't have account? <Link to='/student/Reg' id="reset">Register</Link> </p>
                 </div>
             </form>
         </div>
