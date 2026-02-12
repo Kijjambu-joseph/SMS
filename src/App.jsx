@@ -7,6 +7,7 @@ import StudentRegistration from '/src/auth/StudentRegistration.jsx'
 import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
 import ParentDashboard from "/src/dashboards/parent/ParentDashboard.jsx"
 import AdminDashboard from "/src/dashboards/admin/AdminDashboard.jsx"
+import ForgotPassword from "/src/auth/ForgotPassword.jsx"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/teachers/Reg" element={<TeacherRegistration />} />
           <Route path="/parent" element={<ParentDashboard />}/>
           <Route path="/admin" element={<AdminDashboard />}/>
+          <Route path="/RequestToken" element={<ForgotPassword />}/>
       </Routes>
   </BrowserRouter>
 

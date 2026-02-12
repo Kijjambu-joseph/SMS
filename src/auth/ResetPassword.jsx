@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './ResetPassword.css'
-import kyuLogo from '/src/assets/images-removebg-preview.png'
+import kyuLogo from '/src/assets/Logo.png'
 
 
 
