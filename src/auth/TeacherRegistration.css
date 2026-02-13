@@ -2,18 +2,48 @@
 
 
 /* TEACHERS REGISTRATION FORM CSS */
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
 
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.teacher-Reg{
+    width: 100vw;
+    height: auto;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    /* background-color: rebeccapurple; */
+}
+
+.teacher-Reg-board{
+  width: 90%;
+    height: auto;
+    /* background-color: red; */
+}
 
 .teacher-Reg-board fieldset{
-  border-radius: 10px;
-  border: 2px var(--other-color) solid;
-  padding: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px var(--other-color) solid;
 }
+
 .teacher-Reg-board fieldset legend{
-  font-size: 2em;
-  font-weight: 600px;
-  margin-left: 50px;
+    font-size: 2em;
+    font-weight: 600;
+    margin-left: 50px;
+    color: var(--primary-color);
 }
+
+
 .teacher-Reg{
   width: 100%;
   height: auto;
@@ -21,6 +51,14 @@
   /* display: grid; */
 
 }
+
+
+.Teachers-input-container label{
+  width: 100%;
+    font-size: 1.3em;
+    color: var(--primary-color);
+}
+
 
 .Teachers-input-container input{
   width: 100%;
@@ -30,17 +68,27 @@
   border-radius: 5px;
   padding: 10px;
 }
+
+.Teachers-input-container input:focus{
+  outline: 2px solid var(--primary-color);
+}
+
+
 .Teachers-infor-container{
   width: 100%;
   height: auto;
   /* background-color: gray; */
   /* padding: 10px; */
 }
+
+
 .Teachers-input-container{
   width: 40%;
   display: flex;
   flex-direction: column;
 }
+
+
 .Teachers-infor{
   width: 100%;
   height: auto;
@@ -49,6 +97,8 @@
   justify-content: space-between;
   margin-bottom:20px;
 }
+
+
 .Teachers-input-container select{
   width: 100%;
   height: 40px;
@@ -56,28 +106,194 @@
   border-radius: 5px;
 }
 
+
 .register-btnn{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+
 .teacher-register-btn{
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
+
+
 .teacher-register-btn01 button{
   width: 250px;
   height: 50px;
   border: 1px var(--other-color) solid;
   border-radius: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
 }
+
  .teacher-register-btn02 button{
   width: 250px;
   height: 50px;
-  background-color: rgb(46, 101, 239);
+  background-color: var(--primary-color);
   border-radius: 10px;
   color: white;
   cursor: pointer;
 } 
+
+
+@media screen and (max-width:915px) {
+    .teacher-Reg{
+      width: 100vw;
+      height: auto;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      /* background-color: rebeccapurple; */
+  }
+
+.teacher-Reg-board{
+  width: 90%;
+    height: auto;
+    /* background-color: red; */
+}
+
+    .teacher-Reg-board fieldset{
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px var(--other-color) solid;
+    }
+
+
+    .teacher-Reg-board fieldset legend{
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+    .Teachers-infor-container{
+        width: 100%;
+        height: auto;
+        /* background-color: gray; */
+    }
+
+    .Teachers-infor{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: space-between; */
+        margin-bottom: 20px;
+        /* background-color: yellow; */
+    }
+
+    .Teachers-input-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+
+    .Teachers-input-container label{
+        width: 100%;
+        font-size: 1.3em;
+        /* background-color: palevioletred; */
+    }
+
+    .Teachers-input-container input{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px var(--other-color) solid;
+        font-size: 1.2em;
+    }
+
+
+    .Teachers-input-container select{
+        height: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px var(--other-color) solid;
+        font-size: 1.2em;
+    }
+
+    .teacher-register-btn{
+      width: 60vw;
+      height: auto;
+      display: flex;
+      gap: 20px;
+      /* background-color: gray; */
+    }
+
+
+     .teacher-register-btn02 button{
+        width: 150px;
+        height: 50px;
+        /* border: 1px var(--other-color) solid; */
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .teacher-register-btn01 button{
+        width: 150px;
+        height: 50px;
+        border: 1px var(--primary-color) solid;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+}
+
+
+@media screen and (max-width:414px) {
+
+    
+     .teacher-Reg-board fieldset legend{
+        font-size: 1em;
+        font-weight: 600;
+        margin-left: 50px;
+    }
+
+     .Teachers-input-container label{
+        width: 100%;
+        font-size: 1em;
+        /* background-color: palevioletred; */
+    }
+
+    .Teachers-input-container input{
+        height: 40px;
+        font-size: 1em;
+    }
+
+    .teacher-register-btn{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+   }
+
+
+    .teacher-register-btn01 button{
+      width: 120px;
+      height: 40px;
+    }
+
+ .teacher-register-btn02 button{
+    width: 150px;
+    height: 40px;
+    /* background-color: red; */
+  } 
+
+
+    
+}
+
+
 

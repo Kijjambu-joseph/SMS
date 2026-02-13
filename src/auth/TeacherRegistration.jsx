@@ -113,8 +113,8 @@ function TeacherRegistration(){
                                 <input type="text" id="phone-number" required placeholder="Phone-number"/>
                             </div>
                             <div className="Teachers-input-container">
-                                <label htmlFor="email">Email(if any)</label>
-                                <input type="text" id="email" required placeholder="Email"/>
+                                <label htmlFor="email">Email</label>
+                                <input type="email" id="email" required placeholder="Email"/>
                             </div>
 
                         </div>  
@@ -225,8 +225,8 @@ function TeacherRegistration(){
                         </div> 
                     </div>
                 </fieldset>
+                
                 <div className="register-btnn">
-                    <div></div>
                     <div className="teacher-register-btn">
                         <div className="teacher-register-btn01">
                             <button>Clear Form</button>
