@@ -27,8 +27,9 @@ function ResetPassword (){
                             <i class="fa-solid fa-lock"></i>
                             <input type="password"  id="comfirm password" placeholder="Comfirm password" required />
                         </div>
+                        <button>Set Password</button>
                     </div>
-                    <p>Proceed to,<Link to='/login' id="press">Login</Link></p>
+                    <p>Remembered Password? <Link to='/' id="press"> Login</Link> </p>
                 </div>
             </form>
         </div>
