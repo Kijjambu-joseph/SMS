@@ -3,6 +3,7 @@ import Header from "./Header";
 import SideBar from "./SideBar";
 import AdminCards from "./AdminCards";
 import Body from "./Body";
+import './Body.css';
 
 
 
@@ -11,12 +12,12 @@ import Body from "./Body";
 
 function AdminDashboard (){
     return(
-        <div>
+        <div className="w-full">
             <Header/>
-            <div className="admin-overview">
+            <div className=" w-full admin-overview">
                 <SideBar/>
 
-                <div>
+                <div className="admin-body-container">
                     <AdminCards/>
 
                     <div>
