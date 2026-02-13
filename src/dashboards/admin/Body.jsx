@@ -1,5 +1,6 @@
 import React from "react";
 import './Body.css';
+import { Link } from "react-router-dom";
 
 function Body (){
       return(
@@ -37,11 +38,11 @@ function Body (){
           <div className="Admin-actions">
             <h1>Quick Actions</h1>
             <div className="Admin-btn001">
-              <button >Add New Student</button>
+            <Link to="/student/Reg"> <button> Add New Student</button> </Link>
             </div>
 
             <div className="Admin-buttons">
-              <button>Add New Teacher</button>
+              <Link to='/teachersReg'> <button>Add New Teacher</button> </Link>
             </div>
 
             <div className="Admin-btn002">

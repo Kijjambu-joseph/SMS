@@ -119,7 +119,7 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: rgb(255, 255, 255);
-        color: black;
+        color: var(--primary-color);
     }
 
 @media screen and (max-width:915px) {
@@ -219,7 +219,7 @@
         border-radius: 10px;
         cursor: pointer;
         background-color: rgb(255, 255, 255);
-        color: black;
+        color: var(--primary-color);
     }
 
 }
@@ -252,4 +252,19 @@
         font-weight: 600;
         margin-left: 50px;
     }
+    
+    .student-reg-content fieldset legend{
+        font-size: 1em;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+
+    .student-reg-content .btn1{
+        font-size: 0.8em;
+    }
+
+    .student-reg-content .btn2{
+        font-size: 1em;
+    }
+   
 }
