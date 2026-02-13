@@ -1,16 +1,16 @@
 import React from "react";
-import kyuLogo from '/src/assets/images-removebg-preview.png'
+import kyuLogo from '/src/assets/Logo.png'
 import './SideBar.css'
 
 function SideBar (){
     return(
         <div className="admin-sidebar">
         
-                    <div className="Kyu">
+                    <div className="admin-sidebar-logo">
                         <img src={kyuLogo} alt="" className="KyuLogo" />
                     </div>
         
-                    <h3 style={{color:"black", textAlign:"center", marginBottom: "10px",fontWeight:"bold"}}>Admin.</h3>
+                    <h1 className="  text-center text-2xl font-bold">Admin</h1>
                         <hr />
                     <div className="sidebar-content">
                         <i class="fa-solid fa-house-user" id="admin-icon-side"></i>
@@ -21,7 +21,7 @@ function SideBar (){
         
                     <div className="sidebar-content">
                         <i class="fa-solid fa-users" id="admin-icon-side"></i>
-                        <a href="">students</a>
+                        <a href="">Students</a>
                     </div>
         
                     <div className="sidebar-content">
@@ -53,11 +53,11 @@ function SideBar (){
         
                     <div className="sidebar-content">
                         <i class="fa-solid fa-gear" id="admin-icon-side"></i>
-                        <a href="">setting</a>
+                        <a href="">Setting</a>
                     </div>
                     <hr />
                     <div className="admin-gmail">
-                        <h2>admin@gmail.com</h2>
+                        <h2 className="text-center font-semibold text-2xl">Log out</h2>
                     </div>
                 </div>
     )

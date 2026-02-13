@@ -1,13 +1,41 @@
 
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
 
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
 
 .admin-sidebar{
-    width: 30vh;
-    min-height: 100vh;
+    width: 20%;
+    height: 89vh;
+    margin: 5px;
+    border-radius: 5px;
     /* background-color: #1E40AF; */
     padding: 20px;
     box-shadow: 0 0 5px gray;
+    /* position: sticky;
+    top: 100px; */
+    color: var(--primary-color);
   }
+
+  .admin-sidebar-logo {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .admin-sidebar-logo img{
+    width: 100px;
+    height: 95px;
+    margin-bottom: 20px;
+  }
+
   .sidebar-content{
     display: flex;
     align-items: center;
@@ -15,7 +43,13 @@
     margin-bottom: 20px;
   }
   .sidebar-content a{
-    color: black;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .sidebar-content i{
+    color: var(--primary-color);
+    font-size: 15px;
   }
 
   .fa-graduation-cap,
@@ -23,15 +57,15 @@
     color: #ffffff;
     font-size: 20px;
   }
+
   hr{
     margin-bottom: 10px;
     border: 1px solid gray;
   }
+
+
   .admin-gmail h2{
-    color: black;
+    color: var(--suplement-color);
   }
 
-  #admin-icon-side{
-    color: black;
-    font-size: 15px;
-  }
+  
