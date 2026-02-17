@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import kyuLogo from '/src/assets/Logo.png'
-import './SideBar.css'
+import "/src/dashboards/admin/SideBar.css"
 
 function SideBar (){
     return(
@@ -15,7 +15,7 @@ function SideBar (){
                         <hr />
                     <div className="sidebar-content">
                         <i class="fa-solid fa-house-user" id="admin-icon-side"></i>
-                        <Link to="/admin" id="dashboard-link">Dashboard</Link>
+                        <Link to="/admin">Dashboard</Link>
                     </div>
         
                     
@@ -42,7 +42,7 @@ function SideBar (){
         
                     <div className="sidebar-content">
                         <i class="fa-solid fa-clipboard-user" id="admin-icon-side"></i>
-                        <Link to="/admin/attendanceSection">Attendencs</Link>
+                        <Link to="/admin/attendanceSection" id="dashboard-link">Attendencs</Link>
                     </div>
         
                     <div className="sidebar-content">

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './ForgotPassword.css'
-import kyuLogo from '/src/assets/images-removebg-preview.png'
+import kyuLogo from '/src/assets/Logo.png'
 
 
 function ForgotPassword (){
@@ -11,7 +11,7 @@ function ForgotPassword (){
                 <div className="Kyu">
                     <img src={kyuLogo} alt="" className="KyuLogo" />
                 </div>
-                <h1>Forgot Password</h1>
+                <h1>Request Link</h1>
                 <div className="forgot-inputs">
 
                     <div className="forgot-data">
@@ -23,9 +23,9 @@ function ForgotPassword (){
                         </div>
                     </div>
                     <div className="forgot-btn">
-                        <button>SendLink</button>
+                        <button>Send Link</button>
                     </div>
-                    <p>Then proceed to reset,<Link to='/resetpassword' id="proceed">Reset</Link></p>
+                    <p>Have account?, <Link to='/' id="proceed">Login</Link></p>
                 </div>
             </form>
         </div>

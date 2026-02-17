@@ -31,8 +31,7 @@ function LoginForm(){
                     </div>
                     
                     <button className="login-btn">Login</button>
-                    <p>Forgot password? <Link to='/forgotPassword'  className="addressed" >Click here</Link> </p>
-                    <p>Don't have account? <Link to='/student/Reg' id="reset">Register</Link> </p>
+                    <p>Forgot password? <Link to='/RequestToken'  className="addressed" >Click here</Link> to Reset</p>
                 </div>
             </form>
         </div>

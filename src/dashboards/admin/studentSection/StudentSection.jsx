@@ -1,32 +1,24 @@
 import React from "react";
-import Header from "./Header";
-import SideBar from "./SideBar";
-import AdminCards from "./AdminCards";
-import Body from "./Body";
-import './Body.css';
+import Header from "/src/dashboards/admin/Header.jsx";
+import SideBar from "/src/dashboards/admin/studentSection/SideBar.jsx";
 
-
-
-
-
-
-function AdminDashboard (){
+function StudentSection (){
     return(
         <div className="w-full">
             <Header/>
             <div className=" w-full admin-overview">
                 <SideBar/>
 
-                <div className="admin-body-container">
+                {/* <div className="admin-body-container">
                     <AdminCards/>
 
                     <div>
                       <Body/>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>
     )
 }
-export default AdminDashboard;
+export default StudentSection;

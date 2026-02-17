@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './ResetPassword.css'
-import kyuLogo from '/src/assets/images-removebg-preview.png'
+import kyuLogo from '/src/assets/Logo.png'
 
 
 
@@ -27,8 +27,9 @@ function ResetPassword (){
                             <i class="fa-solid fa-lock"></i>
                             <input type="password"  id="comfirm password" placeholder="Comfirm password" required />
                         </div>
+                        <button>Set Password</button>
                     </div>
-                    <p>Proceed to,<Link to='/login' id="press">Login</Link></p>
+                    <p>Remembered Password? <Link to='/' id="press"> Login</Link> </p>
                 </div>
             </form>
         </div>

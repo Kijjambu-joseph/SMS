@@ -1,11 +1,22 @@
 
-
+.admin-body-container{
+  width: 80%;
+  height: 89vh;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px gray;
+  color: var(--primary-color);
+  overflow: auto;
+  /* background-color: aqua; */
+}
 
 .Body-container{
     display: flex;
     gap: 30px;
     margin-left: 30px;
     margin-top: 20px;
+    /* background-color: yellow; */
   }
   .Admin-activities{
     width: 630px;
