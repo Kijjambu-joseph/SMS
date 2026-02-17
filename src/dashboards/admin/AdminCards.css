@@ -1,4 +1,15 @@
+.admin-container{
+  width: 97.2%;
+  /* background-color: red; */
+}
 
+.admin-container .admin-dashboard-cards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  /* background-color: palevioletred; */
+}
 
 #admin-icon-student{
     color: green;
@@ -53,30 +64,26 @@
 
   .admin-overview{
     display: flex;
+    /* background-color: rebeccapurple; */
   }
-  .admin-view{
-    width: 300px;
-    height: 150px;
-    /* background-color: whitesmoke; */
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    /* color: #1E40AF; */
-    border-radius: 5px;
-    box-shadow: 0 0 5px gray;
+
+  .admin-card{
+    box-shadow: 0 0px 8px rgba(8, 8, 8, 0.5);
+    padding: 20px;
+    border-radius: 10px;
   }
   
-  .admin-view h1{
+  .admin-card h1{
     font-size: 15px;
     /* color: #1E40AF; */
     color: black;
   }
-  .admin-view p{
+
+  .admin-card p{
     font-size: 15px;
     font-weight: bold;
   }
+
   .fa-book-open,
   .fa-graduation-cap,
   .fa-users{

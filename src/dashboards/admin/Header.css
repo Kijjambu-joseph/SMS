@@ -84,3 +84,42 @@
     top: 0;
     left: 20px;
   }
+
+  .responsive-header{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    display: none;
+  }
+
+  .responsive-header i{
+    color: white;
+    font-size: 2em;
+  }
+
+.responsive-header .user-wrap{
+    position: relative;
+    /* background-color: palevioletred; */
+  }
+
+
+  .responsive-header .user-wrap i{
+    font-size: 40px;
+    color: var(--suplement-color);
+  }
+  
+
+  .responsive-header .user-wrap .new-notification{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    color: red;
+    font-size: 1.2em;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
