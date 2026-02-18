@@ -13,9 +13,9 @@
 
 .admin-sidebar{
     width: 20%;
-    height: 89vh;
-    margin: 5px;
-    border-radius: 5px;
+    height: 100vh;
+    margin: 0px;
+    /* border-radius: 5px; */
     /* background-color: #1E40AF; */
     padding: 20px;
     box-shadow: 0 0 5px gray;
@@ -31,8 +31,8 @@
   }
 
   .admin-sidebar-logo img{
-    width: 100px;
-    height: 95px;
+    width: 80px;
+    height: 100px;
     margin-bottom: 20px;
   }
 

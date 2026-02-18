@@ -4,11 +4,11 @@ import './Header.css'
 
 function Header(){
     return(
-        <header className="admin-header w-full h-auto flex items-center justify-between ">
+        <header className="admin-header w-98/100 h-auto flex items-center justify-between ">
 
             <div className="admin-header-content1 w-80/100 flex items-center justify-center gap-10 ">
 
-                <h1 className="text-white text-4xl">PSS</h1>
+                {/* <h1 className="text-white text-4xl">PSS</h1> */}
 
                 <div className="admin-search-wrapper">
                     <i class="fa-solid fa-search"></i>
