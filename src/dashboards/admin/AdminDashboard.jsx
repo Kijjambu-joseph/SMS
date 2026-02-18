@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import AdminCards from "./AdminCards";
+import ResponsiveHeader from "./ResponsiveHeader";
 import Body from "./Body";
 import './Body.css';
 
@@ -14,6 +15,7 @@ function AdminDashboard (){
     return(
         <div className="w-full">
             <Header/>
+            <ResponsiveHeader/>
             <div className=" w-full admin-overview">
                 <SideBar/>
 
