@@ -1,7 +1,7 @@
 import React from "react";
-import './AdminCards.css'
+import '/src/dashboards/admin/adminCards/AdminCards.css'
 import { useState } from "react";
-import Card from "./Card";
+import Card from '/src/dashboards/admin/Card.jsx';
 
 function AdminCards (){
     const [TotalStudents, setTotalStudents] = useState(0);
