@@ -13,13 +13,14 @@ import './Body.css';
 
 function AdminDashboard (){
     return(
-        <div className="w-full">
-            <Header/>
-            <ResponsiveHeader/>
-            <div className=" w-full admin-overview">
-                <SideBar/>
-
-                <div className="admin-body-container">
+        <div className="w-full flex gap-2 fixed">
+            <SideBar/>
+             
+            <div className=" w-80/100 flex flex-col  admin-overview">
+                <Header/>
+                <ResponsiveHeader/>
+                 
+                <div className="admin-body-container w-98/100 ">
                     <AdminCards/>
 
                     <div>
