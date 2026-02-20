@@ -70,13 +70,13 @@
   }
 
   .admin-header-dp{
-    width: 38px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
   }
 
   .admin-header .user-wrap .new-notification{
-    width: 18px;
+    width: 23px;
     height: 23px;
     background-color: white;
     border-radius: 50%;
@@ -98,6 +98,29 @@
     display: none;
   }
 
+  
+
+
+   @media screen and (max-width: 914px) {
+
+    .admin-header{
+      margin: 5px;
+      border-radius: 5px;
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: none;
+    }
+
+    .responsive-header{
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+    }
+
   .responsive-header i{
     color: white;
     font-size: 2em;
@@ -110,21 +133,29 @@
 
 
   .responsive-header .user-wrap i{
-    font-size: 40px;
+    font-size: 2.5em;
     color: var(--suplement-color);
   }
   
 
   .responsive-header .user-wrap .new-notification{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: white;
     border-radius: 50%;
     text-align: center;
     color: red;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     position: absolute;
     top: 0;
     left: 20px;
+  }
+
+  .responsive-header .admin-header-dp{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
   }

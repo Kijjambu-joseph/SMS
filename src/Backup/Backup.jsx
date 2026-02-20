@@ -144,3 +144,154 @@ export default AdminCards;
   .fa-users{
     color: black;
   }
+
+  // SIDE BAR CODE BACKUP
+
+  import React from "react";
+import { Link } from "react-router-dom";
+import kyuLogo from '/src/assets/Logo.png'
+import './SideBar.css'
+
+function SideBar (){
+    return(
+        <div className="admin-sidebar">
+        
+                    <div className="admin-sidebar-logo">
+                        <img src={kyuLogo} alt="" className="KyuLogo" />
+                    </div>
+        
+                    <h1 className="  text-center text-2xl font-bold">Admin</h1>
+                        <hr />
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-house-user" id="admin-icon-side"></i>
+                        <Link to="/admin" id="dashboard-link">Dashboard</Link>
+                    </div>
+        
+                    
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-users" id="admin-icon-side"></i>
+                        <Link to="/admin/studentSection">Students</Link>
+                    </div>
+        
+                    <div className="sidebar-content">
+                        <i class="fas fa-graduation-cap" id="admin-icon-side"></i>
+                        <Link to="/admin/teacherSection">Teachers</Link>
+                    </div>
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-book-open" id="admin-icon-side"></i>
+                        <Link to="/admin/classSection">Classes</Link>
+                    </div>
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-marker" id="admin-icon-side"></i>
+                        <Link to="/admin/marksSection">Marks</Link>
+                    </div>
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-clipboard-user" id="admin-icon-side"></i>
+                        <Link to="/admin/attendanceSection">Attendencs</Link>
+                    </div>
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-calendar" id="admin-icon-side"></i>
+                        <Link to="/admin/timetableSection">Time table</Link>
+                    </div>
+        
+                    
+        
+                    <div className="sidebar-content">
+                        <i class="fa-solid fa-gear" id="admin-icon-side"></i>
+                        <Link to="/admin/settingSection">Setting</Link>
+                    </div>
+                    <hr />
+                    <div className="admin-gmail">
+                        <h2 className="text-center font-semibold text-2xl">Log out</h2>
+                    </div>
+                </div>
+    )
+}
+export default SideBar;
+
+
+// SIDE BAR CSS STYLE
+
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.admin-sidebar{
+    width: 20%;
+    height: 100vh;
+    margin: 0px;
+    /* border-radius: 5px; */
+    /* background-color: #1E40AF; */
+    padding: 20px;
+    box-shadow: 0 0 5px gray;
+    /* position: sticky;
+    top: 100px; */
+    color: var(--primary-color);
+  }
+
+  .admin-sidebar-logo {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .admin-sidebar-logo img{
+    width: 80px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  #dashboard-link{
+    width: 100%;
+    background-color: var(--primary-color);
+    color:white;
+    padding: 5px 10px;
+  }
+  .sidebar-content a{
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+
+  .sidebar-content i{
+    color: var(--primary-color);
+    font-size: 20px;
+  }
+
+  .fa-graduation-cap,
+  .fa-book-open{
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  hr{
+    margin-bottom: 10px;
+    border: 1px solid gray;
+  }
+
+
+  .admin-gmail h2{
+    color: var(--suplement-color);
+  }
+
+  

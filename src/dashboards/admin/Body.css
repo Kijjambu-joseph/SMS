@@ -114,3 +114,49 @@
     color: white;
     cursor: pointer;
   }
+
+
+  @media screen and (max-width: 914px) {
+    .admin-overview{
+      width: 100%;
+    }
+
+    .Body-container{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      /* margin-left: 30px;
+      margin-top: 20px; */
+      /* background-color: yellow; */
+    }
+
+
+    .Admin-activities{
+      width: 100%;
+      height: auto;
+      /* background-color: whitesmoke; */
+      /* border: 1px solid black; */
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 5px gray;
+
+  }
+
+
+  .Admin-actions{
+    width: 100%;
+    height: auto;
+    /* background-color: whitesmoke; */
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px gray;
+  }
+
+    
+    
+  }
+
+  

@@ -11,7 +11,7 @@
     --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
 }
 
-.admin-sidebar{
+.sidebar{
     width: 20%;
     height: 100vh;
     margin: 0px;
@@ -24,23 +24,24 @@
     color: var(--primary-color);
   }
 
-  .admin-sidebar-logo {
+  .sidebar-logo {
     width: 100%;
     display: grid;
     place-items: center;
   }
 
-  .admin-sidebar-logo img{
-    width: 80px;
-    height: 100px;
+  .sidebar-logo img{
+    width: 120px;
+    height: 120px;
     margin-bottom: 20px;
   }
 
   .sidebar-content{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 20px;
+    /* background-color: red; */
   }
 
   #dashboard-link{
@@ -72,8 +73,36 @@
   }
 
 
-  .admin-gmail h2{
-    color: var(--suplement-color);
+  .Logout-btn h2{
+    color: var(--bg-main);
+  }
+
+
+
+  @media screen and (max-width: 914px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: none;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .admin-sidebar-logo {
+      display: none; /* Hide the logo on smaller screens */
+    }
+
+    .sidebar-content {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sidebar-content a {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
   }
 
   
