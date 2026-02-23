@@ -11,6 +11,9 @@ function LoginForm(){
         password:''
     })
 
+    const [LoginMessage, setLoginMessage] = useState("");
+    const [FailureMessage, setFailureMessage] = useState(" Not Submited❌");
+    const [Loading, setLoading] = useState(false);
     // const [Loading, setLoading] = useState(false);
     // const [LoadingMessage, setLoadingMessage] = useState('');
 
@@ -26,10 +29,9 @@ function LoginForm(){
 
 
    const handleSubmit = async (e) => {
-        const [Message, setMessage] = useState("");
         e.preventDefault();
         setLoading(true);
-        setMessage("");
+        // setMessage("");
 
         try {
         await axios.post(
@@ -37,8 +39,8 @@ function LoginForm(){
             LoginData
         );
 
-        setMessage("Student registered successfully ✅");
-        console.log(Message)
+        setLoginMessage("Loged in ✅");
+        console.log({LoginMessage})
 
         setLoginData({
             name: "",
@@ -47,8 +49,8 @@ function LoginForm(){
         });
 
         } catch (error) {
-        setMessage("Error submitting form ❌");
-        console.log(Message)
+        setLoginMessage("Error submitting form ❌");
+        console.log({LoginMessage})
         }
 
         setLoading(false);
@@ -99,7 +101,7 @@ function LoginForm(){
                         </div>
                     </div>
                     
-                    <button type="submit" className="login-btn">Login</button>
+                    <button type="submit" className="login-btn" disabled={Loading}>{Loading ? "Logging in..." : "Login"}</button>
                     <p>Forgot password? <Link to='/RequestToken'  className="addressed" >Click here</Link> to Reset</p>
                 </div>
             </form>
