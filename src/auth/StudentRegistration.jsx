@@ -17,7 +17,11 @@ function StudentRegistration(){
                         <div className="bio-content">
                             <div className="input-container">
                                 <label htmlFor="first-name">First Name</label>
-                                <input type="text" id="first-name" required placeholder="First Name"/>
+
+                                <input type="text" id="first-name" required placeholder="First Name"
+                                    name="firstName"
+                                    value={StRegData.firstName}
+                                />
                                 <p></p>
                             </div>
 
