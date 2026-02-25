@@ -3,9 +3,8 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import './StudentRegistration.css'
 
-function StudentRegistration(){
+function StudentRegistration({onClose}){
 
-    // const [formData, setFormData] = useState({})
 
     return(
         <div className="Student-reg">
@@ -18,10 +17,7 @@ function StudentRegistration(){
                             <div className="input-container">
                                 <label htmlFor="first-name">First Name</label>
 
-                                <input type="text" id="first-name" required placeholder="First Name"
-                                    name="firstName"
-                                    value={StRegData.firstName}
-                                />
+                                <input type="text" id="first-name" required placeholder="First Name"/>
                                 <p></p>
                             </div>
 
@@ -286,7 +282,7 @@ function StudentRegistration(){
 
                 <div className=" w-100/100 flex items-center  gap-2">
                     <button className="btn1">Register Student</button>
-                    <button className="btn2">Clear Form</button>
+                    <button className="btn2" onClick={onClose}>Close Form</button>
                 </div>
             </form>
         </div>

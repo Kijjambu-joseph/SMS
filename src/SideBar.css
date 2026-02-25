@@ -1,0 +1,108 @@
+
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.sidebar{
+    width: 20%;
+    height: 100vh;
+    margin: 0px;
+    /* border-radius: 5px; */
+    /* background-color: #1E40AF; */
+    padding: 20px;
+    box-shadow: 0 0 5px gray;
+    /* position: sticky;
+    top: 100px; */
+    color: var(--primary-color);
+  }
+
+  .sidebar-logo {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .sidebar-logo img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    /* background-color: red; */
+  }
+
+  #dashboard-link{
+    width: 100%;
+    background-color: var(--primary-color);
+    color:white;
+    padding: 5px 10px;
+  }
+  .sidebar-content a{
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+
+  .sidebar-content i{
+    color: var(--primary-color);
+    font-size: 20px;
+  }
+
+  .fa-graduation-cap,
+  .fa-book-open{
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  hr{
+    margin-bottom: 10px;
+    border: 1px solid gray;
+  }
+
+
+  .Logout-btn h2{
+    color: var(--bg-main);
+  }
+
+
+
+  @media screen and (max-width: 914px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: none;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .admin-sidebar-logo {
+      display: none; /* Hide the logo on smaller screens */
+    }
+
+    .sidebar-content {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sidebar-content a {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+
+  
