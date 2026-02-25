@@ -1,8 +1,23 @@
-import React from "react";
+import { useState } from 'react';
 import './Body.css';
-import { Link } from "react-router-dom";
+import StudentRegistration from '/src/auth/StudentRegistration.jsx';
+import TeacherRegistration from '/src/auth/TeacherRegistration.jsx';
+import LoginForm from '/src/auth/Login.jsx'
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement("#root");
 
 function Body (){
+
+  const [openForm, setOpenForm] = useState(null);
+  // const [closeForm, setCloseForm] = useState(null);
+
+  const handleForm = {
+    studentForm: <StudentRegistration onClose ={ () => {setOpenForm(null)}} />,
+    teacherForm: <TeacherRegistration />,
+    timeTable: <LoginForm />
+  }
+  
       return(
         <div className="Body-container">
 
@@ -38,17 +53,48 @@ function Body (){
           <div className="Admin-actions">
             <h1>Quick Actions</h1>
             <div className="Admin-btn001">
-            <Link to="/student/Reg"> <button> Add New Student</button> </Link>
+            <button onClick={() => setOpenForm("studentForm")}> Add New Student</button> 
             </div>
 
             <div className="Admin-buttons">
-              <Link to='/teachersReg'> <button>Add New Teacher</button> </Link>
+              <button onClick={() => setOpenForm("teacherForm")}>Add New Teacher</button>
             </div>
 
             <div className="Admin-btn002">
-              <button >View Timetable</button>
+              <button onClick={() => setOpenForm("timeTable")}>View Timetable</button>
             </div>
           </div>
+
+          <ReactModal
+              isOpen={openForm}
+              onRequestClose={() => {
+                console.log("clicked");
+                setOpenForm(null)
+              }}
+              shouldCloseOnOverlayClick={true}
+              shouldCloseOnEsc={true}
+              style={{
+
+                overlay: {
+                  backgroundColor: "rgba(0,0,0,0.5)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                },
+                content: {
+                  position: "relative",
+                  inset: "unset",
+                  width: "95%",
+                  maxWidth: "100%",
+                  maxHeight: "95vh",
+                  overflowY: "auto",
+                  padding: "20px",
+                  borderRadius: "12px"
+                }
+              }}
+          >
+            {openForm && handleForm[openForm]}
+          </ReactModal>
         </div>
       )
 }

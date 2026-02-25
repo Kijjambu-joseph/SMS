@@ -1,0 +1,23 @@
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+   --bg-main:#e6a210;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.Card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    box-shadow: 0 0 0.2rem var(--primary-color);
+    border-radius: 0.3rem;
+    padding: 0.7rem;
+    /* background-color: palevioletred; */
+}

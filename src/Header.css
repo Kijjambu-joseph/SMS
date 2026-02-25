@@ -1,0 +1,161 @@
+
+
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+.admin-header{
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.admin-header-content1{
+  width: 60%;
+  height: 90%;
+  /* background-color: green; */
+}
+
+
+.admin-search-wrapper{
+    position: relative;
+    width:100%;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+.admin-search-wrapper input{
+  width: 50%;
+  height: 100%;
+}
+
+.admin-search-wrapper input:focus{
+  outline: 2px solid var(--suplement-color);
+}
+
+
+  .admin-search-wrapper input{
+    width: 100%;
+    height: 30px;
+    border: 1px var(--other-color) solid;
+    padding-left: 40px;
+    border-radius: 15px;
+  }
+  .admin-search-wrapper i{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+  }
+
+  .admin-header .user-wrap{
+    position: relative;
+    /* background-color: palevioletred; */
+  }
+
+  .admin-header .user-wrap i{
+    font-size: 35px;
+    color: var(--suplement-color);
+  }
+
+  .admin-header-dp{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .admin-header .user-wrap .new-notification{
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    color: red;
+    font-size: 0
+    0.2em;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+
+  .responsive-header{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    display: none;
+  }
+
+  
+
+
+   @media screen and (max-width: 914px) {
+
+    .admin-header{
+      margin: 5px;
+      border-radius: 5px;
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: none;
+    }
+
+    .responsive-header{
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+    }
+
+  .responsive-header i{
+    color: white;
+    font-size: 2em;
+  }
+
+.responsive-header .user-wrap{
+    position: relative;
+    /* background-color: palevioletred; */
+  }
+
+
+  .responsive-header .user-wrap i{
+    font-size: 2.5em;
+    color: var(--suplement-color);
+  }
+  
+
+  .responsive-header .user-wrap .new-notification{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    color: red;
+    font-size: 1em;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+
+  .responsive-header .admin-header-dp{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  }
