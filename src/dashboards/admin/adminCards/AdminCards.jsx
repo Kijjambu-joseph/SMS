@@ -1,5 +1,5 @@
 import React from "react";
-import '/src/dashboards/admin/adminCards/AdminCards.css'
+import '/src/dashboards/admin/adminCards/AdminCards.css';
 import { useState } from "react";
 import Card from '/src/dashboards/admin/Card.jsx';
 

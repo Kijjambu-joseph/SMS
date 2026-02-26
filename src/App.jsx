@@ -19,6 +19,15 @@ import TimetableSection from "/src/dashboards/admin/timetableSection/TimetableSe
 import SettingSection from "/src/dashboards/admin/settingSection/SettingSection.jsx"
 import ReportCardSection from "/src/dashboards/admin/reportCardSection/ReportCardSection.jsx";
 
+// STUDENT DASHBOARD IMPORTS
+import MarkSection from '/src/dashboards/student/marksSection/MarksSection.jsx'
+import AttendSection from '/src/dashboards/student/attendanceSection/AttendSection.jsx'
+import MessageSection from '/src/dashboards/student/messageSection/MessageSection.jsx'
+import TimeTableSection from '/src/dashboards/student/timeTableSection/TimeTableSection.jsx'
+import ScheduleSection from '/src/dashboards/student/scheduleSection/ScheduleSection.jsx'
+import HelpSection from "/src/dashboards/student/helpSection/HelpSection.jsx";
+import SettingsSection from '/src/dashboards/student/SettingsSection/SettingsSection.jsx'
+
 
 function App() {
 
@@ -42,7 +51,16 @@ function App() {
           <Route path="/admin/attendanceSection" element={<AttendanceSection />}/>    
           <Route path="/admin/timetableSection" element={<TimetableSection />}/>      
           <Route path="/admin/settingSection" element={<SettingSection />}/>      
-          <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>      
+          <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>   
+
+          {/*STUDENT SECTION ROUTE PATHS  */}
+          <Route path="/myMarks" element={<MarkSection />}/>   
+          <Route path="/myAttendance" element={<AttendSection />}/>
+          <Route path="/myMessages" element={<MessageSection />}/>
+          <Route path="/myTimeTable" element={<TimeTableSection />}/>
+          <Route path="/mySchedule" element={<ScheduleSection />}/>
+          <Route path="/mySettings" element={<SettingsSection />}/>
+          <Route path="/myHelp" element={<HelpSection />}/>
       </Routes>
   </BrowserRouter>
 
