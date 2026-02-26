@@ -4,7 +4,7 @@ import ResponsiveHeader from "/src/ResponsiveHeader.jsx";
 import StudentCards from "/src/dashboards/student/StudentCards.jsx";
 // import Charts from "./Charts";
 
-function StudentDashboard() {
+function MarkSection() {
   return (
     <div className="w-full flex gap-2 fixed">
             <StudentSideBar/>
@@ -14,9 +14,10 @@ function StudentDashboard() {
                 <ResponsiveHeader/>
                  
                 <div className="admin-body-container w-98/100 ">
-                    <StudentCards/>
+                    {/* <StudentCards/> */}
 
                     <div>
+                      <h1>Marks Section</h1>
                       {/* <Body/> */}
                     </div>
                 </div>
@@ -26,4 +27,4 @@ function StudentDashboard() {
   );
 }
 
-export default StudentDashboard;
+export default MarkSection;
