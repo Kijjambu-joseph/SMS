@@ -1,0 +1,27 @@
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+   --bg-main:#e6a210;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+
+.body-container{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 2px var(--primary-color);
+    border-radius: 0.2em;
+    padding: 0.5em;
+    /* background-color: rebeccapurple; */
+}
+
+.reg-btn{
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
