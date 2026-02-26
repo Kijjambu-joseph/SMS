@@ -1,4 +1,4 @@
-import '/src/dashboards/admin/SideBar.css'
+import '/src/SideBar.css';
 
 import SideBar from "./SideBar";
 import { useState } from "react";

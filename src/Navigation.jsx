@@ -1,11 +1,11 @@
-import '/src/dashboards/admin/SideBar.css'
-import {Link} from 'react-router-dom'   
+import '/src/SideBar.css'
+import {NavLink} from 'react-router-dom'   
 
-function Navigation({NavIcon, NavName}){
+function Navigation({NavIcon, NavName, to}){
     return(
         <div className="sidebar-content">
             <div>{NavIcon}</div>
-            <Link >{NavName}</Link>
+            <NavLink to={to} end={to === "/admin"} className={({ isActive}) => isActive ? "dashboard-link" : "inactive"}>{NavName}</NavLink>
         </div>
     )
 }

@@ -12,7 +12,7 @@ import AdminSidebar from "/src/dashboards/admin/AdminSidebar.jsx";
 
 
 
-function ClassSection (){
+function ReportCardSection (){
     return(
         <div className="w-full flex gap-2 fixed">
             <AdminSidebar/>
@@ -33,4 +33,4 @@ function ClassSection (){
         </div>
     )
 }
-export default ClassSection;
+export default ReportCardSection;
