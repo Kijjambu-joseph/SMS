@@ -1,4 +1,5 @@
 import React from "react";
+import '/src/SideBar.css'
 import StudentDashboard from "./dashboards/student/StudentDashboard";
 import { Routes,Route,BrowserRouter } from "react-router-dom";
 import Libriarian from "./dashboards/librarian/LibrarianDashboard";
@@ -16,6 +17,7 @@ import MarksSection from "/src/dashboards/admin/marksSection/MarksSection.jsx"
 import AttendanceSection from "/src/dashboards/admin/attendanceSection/AttendanceSection.jsx"
 import TimetableSection from "/src/dashboards/admin/timetableSection/TimetableSection.jsx"
 import SettingSection from "/src/dashboards/admin/settingSection/SettingSection.jsx"
+import ReportCardSection from "/src/dashboards/admin/reportCardSection/ReportCardSection.jsx";
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
           <Route path="/admin/attendanceSection" element={<AttendanceSection />}/>    
           <Route path="/admin/timetableSection" element={<TimetableSection />}/>      
           <Route path="/admin/settingSection" element={<SettingSection />}/>      
+          <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>      
       </Routes>
   </BrowserRouter>
 
