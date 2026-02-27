@@ -7,10 +7,184 @@ ReactModal.setAppElement("#root");
 
 const StudentBody = () => {
     const [regFormOpen, setRegFormOpen] = useState(false);
+    const [students, setStudents] = useState([]);
 
     return(
         <div className="body-container">
             <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Student</button>
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Class</th>
+                  <th>Stream</th>
+                  <th>Actions</th>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+                <tr>
+                  <td>ST001</td>
+                  <td>John Doe</td>
+                  <td>Male</td>
+                  <td>S.1</td>
+                  <td>Science</td>
+                  <td>✅ ❌</td>
+                </tr>
+
+            </table>
 
             <ReactModal
               isOpen={regFormOpen}
