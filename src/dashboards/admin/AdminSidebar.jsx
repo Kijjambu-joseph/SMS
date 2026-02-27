@@ -5,7 +5,7 @@ import { useState } from "react";
 import AdminNavigation from "/src/dashboards/admin/adminNavigate/AdminNavigation.jsx";
 
 function AdminSidebar(){
-    const [role, setRole] = useState("Admin");
+    const [role, setRole] = useState("User");
     return(
         <SideBar role={role} navigation={<AdminNavigation />} />
     );
