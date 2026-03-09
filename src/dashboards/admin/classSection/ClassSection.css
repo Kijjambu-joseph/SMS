@@ -1,0 +1,50 @@
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#000080;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.classReg{
+    width: 50vw;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(235, 229, 222);
+    color: var(--primary-color);
+}
+
+.classReg form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: green; */
+}
+
+.classReg .class-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* background-color: orange; */
+}
+
+.class-container .class-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-content input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--primary-color);
+}
+
