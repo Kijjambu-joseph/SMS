@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import './StudentRegistration.css'
@@ -41,15 +41,17 @@ function StudentRegistration({onClose}){
     });
 
     const handleFileChange = (e) => {
-            console.log(file);
             setFile(prev => ({
                 ...prev,
                 [e.target.name]: e.target.files[0]
             }));
     };
 
+    useEffect(() =>{
+        console.log(file)
+    }, [file]);
+
     const handleChange = (e) => {
-         console.log(regData);
          const { name, value } = e.target;
 
         setRegData(prev => ({
@@ -58,9 +60,17 @@ function StudentRegistration({onClose}){
         }));
   };
 
+  useEffect(() =>{
+        console.log(regData)
+    }, [file]);
+
+  const handleSubmit =(e) =>{
+    e.preventDefault();
+  }
+
     return(
         <div className="Student-reg">
-            <form action="Post" className="student-reg-content">
+            <form onSubmit={handleSubmit} className="student-reg-content">
                 <fieldset>
                     <legend>Bio-Data</legend>
 

@@ -13,8 +13,6 @@ function AdminNavigation(){
             <Navigation to='/admin/timeTableSection' NavIcon={<i class="fa-solid fa-table" id="admin-icon-side"></i>} NavName="Time Table"/>
             <Navigation to='/admin/reportCardSection' NavIcon={<i class="fa-solid fa-file-alt" id="admin-icon-side"></i>} NavName="Report Cards"/>
             <Navigation to='/admin/settingSection' NavIcon={<i class="fa-solid fa-cog" id="admin-icon-side"></i>} NavName="Settings"/>
-            
-
         </div>
     )
 }
