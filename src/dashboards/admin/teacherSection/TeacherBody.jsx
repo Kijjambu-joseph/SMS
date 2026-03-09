@@ -2,21 +2,22 @@ import '/src/dashboards/admin/studentSection/StudentBody.css'
 import ReactModal from 'react-modal';
 import  { useEffect, useState } from 'react';
 import axios from 'axios';
-import StudentRegistration from '/src/auth/StudentRegistration.jsx'
+import '/src/dashboards/admin/teacherSection/Teacherbody.css'
+import TeacherRegistration from '/src/auth/TeacherRegistration.jsx'
 
 ReactModal.setAppElement("#root");
 
-const StudentBody = () => {
+const TeacherBody = () => {
     const [regFormOpen, setRegFormOpen] = useState(false);
-    const [studentRecord, setStudentRecord] = useState([]);
+    const [teacherRecord, setTeacherRecord] = useState([]);
     const [loading, setLoading] = useState(true)
 
-    const studentData = async () =>{
+    const teacherData = async () =>{
       try{
         setLoading(true)
 
         const response = await axios.get("http://localhost:8080/api/v1/students")
-        setStudentRecord(response.data)
+        setTeacherRecord(response.data)
 
        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (error) {
@@ -28,54 +29,38 @@ const StudentBody = () => {
     }
 
     useEffect(() =>{
-      studentData()
+      teacherData()
     }, [])
 
-      if(loading) return (
-        <div className="fixed inset-0  flex items-center justify-center bg-white/70 backdrop-blur-sm">
-          <div className="flex flex-col items-center gap-2">
-            <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div>
-            <p className="text-blue-600 font-semibold">Loading Teachers...</p>
-          </div>
-      </div>
+    if(loading) return (
+      <div className="fixed inset-0  flex items-center justify-center bg-white/70 backdrop-blur-sm">
+        <div className="flex flex-col items-center gap-2">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div>
+          <p className="text-blue-600 font-semibold">Loading Teachers...</p>
+        </div>
+  </div>
     );
 
     return(
         <div className="body-container">
-            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Student</button>
+            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add New Teacher</button>
+            <button className='refreshBtn' onClick={teacherData}>Refresh</button>
             
             <table>
               <thead>
                 <tr>
-                  <td>Student ID</td>
-                  <td>Student Name</td>
+                  <td>Teacher ID</td>
+                  <td>Name</td>
                   <td>Gender</td>
-                  <td>Class</td>
-                  <td>Stream</td>
+                  <td>Subject Comb</td>
+                  <td>Role</td>
                   <td>Action</td>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  <td>ST001</td>
-                  <td>Omolo Pasikali</td>
-                  <td>Male</td>
-                  <td>S.1</td>
-                  <td>B</td>
-                  <td>Delet Edit View</td>
-                </tr>
-
-                <tr>
-                  <td>ST002</td>
-                  <td>Kijjambu Joseph</td>
-                  <td>Male</td>
-                  <td>S.2</td>
-                  <td>A</td>
-                  <td>Delet Edit View</td>
-                </tr>
                 
-                {studentRecord.map((item) => 
+                {teacherRecord.map((item) => 
                   <tr key={item.id}>
                     <td>{item.id}</td>
                     <td>{item.name}</td>
@@ -121,10 +106,10 @@ const StudentBody = () => {
                 }
               }}
           >
-            {<StudentRegistration onClose={() => setRegFormOpen(false)} />}
+            {<TeacherRegistration onClose={() => setRegFormOpen(false)} />}
           </ReactModal>
         </div>
     );
 }
 
-export default StudentBody;
+export default TeacherBody;

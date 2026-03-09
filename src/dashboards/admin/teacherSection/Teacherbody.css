@@ -1,0 +1,9 @@
+ .refreshBtn{
+    width: 100px;
+    height:40px;
+    margin-left: 20px;
+    /* padding: 10px; */
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+  }
+

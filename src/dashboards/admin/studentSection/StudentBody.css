@@ -28,20 +28,26 @@
 }
 
 table {
-width: 100%;
-  border-bottom: 2px solid var(--primary-color);
-  border-top: 2px solid var(--primary-color);
-  text-align: left;
+    width: 100%;
+    /* This is the "magic" line for complete, solid borders */
+    border-collapse: collapse; 
+    margin-top: 20px;
 }
 
-/* Add vertical borders to every cell except the last one */
-th, td {
-   border-bottom: 2px solid var(--primary-color);
-  border-top: 2px solid var(--primary-color);
-  padding: 10px;
+thead td {
+    border-bottom: 2px solid var(--primary-color);
+    padding: 12px 10px;
+    font-weight: bold;
+    color: #374151;
 }
 
-tr td{
-     border-bottom: 1px solid rgb(211, 210, 210);
-     border-top: 1px solid rgb(211, 210, 210);
+tr td {
+    /* Now this border will look like one continuous line across the row */
+    border-bottom: 1px solid rgb(209, 213, 219); 
+    padding: 12px 10px;
+}
+
+/* Optional: Subtle hover to highlight the full row */
+tbody tr:hover {
+    background-color: #f9fafb;
 }
