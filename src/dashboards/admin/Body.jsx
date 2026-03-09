@@ -14,7 +14,7 @@ function Body (){
 
   const handleForm = {
     studentForm: <StudentRegistration onClose ={ () => {setOpenForm(null)}} />,
-    teacherForm: <TeacherRegistration />,
+    teacherForm: <TeacherRegistration onClose={() => {setOpenForm(null)}} />,
     timeTable: <LoginForm />
   }
   

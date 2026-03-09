@@ -2,7 +2,9 @@ import React from "react";
 import './TeacherRegistration.css';
 
 
-function TeacherRegistration(){
+function TeacherRegistration({onClose}){
+    const [submitting, setSubmitting] = useState(false)
+
     return(
         <div className="teacher-Reg">
             <form action="post" className="teacher-Reg-board">
@@ -121,7 +123,7 @@ function TeacherRegistration(){
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Parent/Gardian Information</legend>
+                    <legend>Next of Kin</legend>
                     <div className="Teachers-infor-container">
                         <div className="Teachers-infor">
 
@@ -228,11 +230,11 @@ function TeacherRegistration(){
                 
                 <div className="register-btnn">
                     <div className="teacher-register-btn">
-                        <div className="teacher-register-btn01">
-                            <button>Clear Form</button>
-                        </div>
                         <div className="teacher-register-btn02">
-                            <button>Register Teacher</button>
+                            <button disabled={submitting} >{submitting ? "Registering..." : "Register teacher"}</button>
+                        </div>
+                        <div className="teacher-register-btn01">
+                            <button onClick={onClose}>Close Form</button>
                         </div>
                     </div>
                 </div>

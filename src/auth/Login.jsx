@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import React from 'react'
 import { useState, useEffect} from "react";
 import kyuLogo from '/src/assets/Logo.png'
 import './Login.css'
@@ -18,14 +17,21 @@ function LoginForm(){
     // const [LoadingMessage, setLoadingMessage] = useState('');
 
     const handleChange = (e) => {
-         console.log(LoginData);
          const { name, value } = e.target;
 
         setLoginData(prev => ({
         ...prev,
         [name]: value
         }));
+
+        
   };
+
+    useEffect(() =>{
+            console.log(LoginData);
+    }, [LoginData])
+
+  
 
 
    const handleSubmit = async (e) => {
@@ -34,18 +40,16 @@ function LoginForm(){
         // setMessage("");
 
         try {
-        await axios.post(
-            "http://localhost:5000/api/students",
-            LoginData
-        );
+            await axios.post(
+                "http://localhost:5000/api/students", LoginData
+            );
 
         setLoginMessage("Loged in ✅");
         console.log({LoginMessage})
 
         setLoginData({
-            name: "",
-            email: "",
-            age: ""
+            username:'',
+            password:''        
         });
 
         } catch (error) {
@@ -55,6 +59,10 @@ function LoginForm(){
 
         setLoading(false);
     };
+
+    useEffect(() =>{
+        console.log({LoginMessage})
+    });
 
     
 

@@ -6,7 +6,7 @@ import ResponsiveHeader from "/src/ResponsiveHeader.jsx";
 import Body from "/src/dashboards/admin/Body.jsx";
 import '/src/dashboards/admin/Card.css';
 import AdminSidebar from "/src/dashboards/admin/AdminSidebar.jsx";
-
+import TeacherBody from '/src/dashboards/admin/teacherSection/TeacherBody.jsx'
 
 
 
@@ -25,7 +25,7 @@ function TeacherSection (){
                     {/* <AdminCards/> */}
 
                     <div>
-                      {/* <Body/> */}
+                      <TeacherBody />
                     </div>
                 </div>
                 
