@@ -36,7 +36,7 @@ const ClassBody = () => {
       <div className="fixed inset-0  flex items-center justify-center bg-white/70 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-2">
           <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div>
-          <p className="text-blue-600 font-semibold">Loading Teachers...</p>
+          <p className="text-blue-600 font-semibold">Loading Class Rec...</p>
         </div>
   </div>
     );
