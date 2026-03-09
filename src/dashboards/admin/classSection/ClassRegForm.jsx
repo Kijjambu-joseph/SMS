@@ -1,9 +1,9 @@
 import './ClassSection.css'
 
-function ClassRegForm(){
+function ClassRegForm(onClose){
     return(
         <div className="classReg">
-            <form onSubmit={console.log("Form submitted")} className="classRegForm">
+            <form onSubmit={onClose} className="classRegForm">
                 <h1>Add Class</h1>
                 <div className="class-container">
                     <div className="class-content">
@@ -40,6 +40,17 @@ function ClassRegForm(){
                     <div className="class-content">
                         <label htmlFor="capacity">Capacity</label>
                         <input type="text" id="capacity" name="capacity" placeholder='Capacity' />
+                    </div>
+                </div>
+
+
+                <div className="class-container">
+                    <div className="class-content">
+                        <button className='btn1'>Add Timetable</button>
+                    </div>
+
+                    <div className="class-content">
+                        <button className='btn2'>Close Form</button>
                     </div>
                 </div>
             </form>

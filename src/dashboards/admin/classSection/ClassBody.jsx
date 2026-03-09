@@ -43,7 +43,7 @@ const ClassBody = () => {
 
     return(
         <div className="body-container">
-            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add New Teacher</button>
+            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Class</button>
             <button className='refreshBtn' onClick={classData}>Refresh</button>
             
             <table>
