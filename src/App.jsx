@@ -4,8 +4,6 @@ import StudentDashboard from "./dashboards/student/StudentDashboard";
 import { Routes,Route,BrowserRouter } from "react-router-dom";
 import Libriarian from "./dashboards/librarian/LibrarianDashboard";
 import LoginForm from "/src/auth/Login.jsx"
-import StudentRegistration from '/src/auth/StudentRegistration.jsx'
-import TeacherRegistration from "/src/auth/TeacherRegistration.jsx"
 import ParentDashboard from "/src/dashboards/parent/ParentDashboard.jsx"
 import AdminDashboard from "/src/dashboards/admin/AdminDashboard.jsx"
 import ForgotPassword from "/src/auth/ForgotPassword.jsx"
@@ -18,6 +16,10 @@ import AttendanceSection from "/src/dashboards/admin/attendanceSection/Attendanc
 import TimetableSection from "/src/dashboards/admin/timetableSection/TimetableSection.jsx"
 import SettingSection from "/src/dashboards/admin/settingSection/SettingSection.jsx"
 import ReportCardSection from "/src/dashboards/admin/reportCardSection/ReportCardSection.jsx";
+
+
+// TESTING PATH
+import ClassRegForm from '/src/dashboards/admin/classSection/ClassRegForm.jsx'
 
 // STUDENT DASHBOARD IMPORTS
 import MarkSection from '/src/dashboards/student/marksSection/MarksSection.jsx'
@@ -35,11 +37,14 @@ function App() {
     <>
   <BrowserRouter>
       <Routes>
+
+        {/* Test Route */}
+
+        <Route path="/classReg" element={<ClassRegForm />} />
+
           <Route path="/" element={< LoginForm />} />
           <Route path="/student" element={<StudentDashboard />}/>
           <Route path="/librarian" element={<Libriarian />} />
-          <Route path="/student/Reg" element={<StudentRegistration />} />
-          <Route path="/teachersReg" element={<TeacherRegistration />} />
           <Route path="/parent" element={<ParentDashboard />}/>
           <Route path="/admin" element={<AdminDashboard />}/>
           <Route path="/admin/studentSection" element={<StudentSection />}/>

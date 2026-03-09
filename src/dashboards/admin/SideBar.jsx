@@ -20,9 +20,8 @@ function SideBar ( {role, navigation}){
                 <h2 className="text-center font-semibold text-2xl">Log out</h2>
             </div>
 
-        
-                    
-                </div>
+            
+        </div>
     )
 }
 export default SideBar;
