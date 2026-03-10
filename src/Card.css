@@ -21,3 +21,25 @@
     padding: 0.7rem;
     /* background-color: palevioletred; */
 }
+
+
+/* BARNER CSS STARTS HERE */
+.barner-content{
+    padding: 20px;
+    box-shadow: 0 0 0.2rem var(--primary-color);
+}
+.barner-content h1{
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.barner-content h1 span{
+    color: var(--suplement-color);
+}
+
+.barner-content p{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}

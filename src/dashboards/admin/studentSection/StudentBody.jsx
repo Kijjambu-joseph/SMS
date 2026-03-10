@@ -43,6 +43,7 @@ const StudentBody = () => {
     return(
         <div className="body-container">
             <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Student</button>
+            <button className='refreshBtn' onClick={studentData}>Refresh</button>
             
             <table>
               <thead>
@@ -63,16 +64,25 @@ const StudentBody = () => {
                   <td>Male</td>
                   <td>S.1</td>
                   <td>B</td>
-                  <td>Delet Edit View</td>
-                </tr>
+                  <td className='action-icons'>
+                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
+                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
+                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
+                  </td>
 
+                </tr>
+  
                 <tr>
                   <td>ST002</td>
                   <td>Kijjambu Joseph</td>
                   <td>Male</td>
                   <td>S.2</td>
                   <td>A</td>
-                  <td>Delet Edit View</td>
+                    <td className='action-icons'>
+                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
+                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
+                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
+                  </td>
                 </tr>
                 
                 {studentRecord.map((item) => 
@@ -83,8 +93,11 @@ const StudentBody = () => {
                     <td>{item.class}</td>
                     <td>{item.stream}</td>
                     <td>
-                      <button className='btn btn-primary'>Edit</button>
-                      <button className='btn btn-danger'>Delete</button>
+                    <td className='action-icons'>
+                      <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
+                      <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
+                      <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
+                    </td>
                     </td>
 
                   </tr>

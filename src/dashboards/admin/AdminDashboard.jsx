@@ -6,6 +6,7 @@ import ResponsiveHeader from "./ResponsiveHeader";
 import Body from "./Body";
 import './Body.css';
 import AdminSidebar from "./AdminSidebar";
+import AdminBarner from '/src/dashboards/admin/AdminBarner.jsx'
 
 
 
@@ -22,6 +23,7 @@ function AdminDashboard (){
                 <ResponsiveHeader/>
                  
                 <div className="admin-body-container w-98/100 ">
+                    <AdminBarner/>
                     <AdminCards/>
 
                     <div>

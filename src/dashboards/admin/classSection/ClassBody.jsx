@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import '/src/dashboards/admin/teacherSection/Teacherbody.css'
-import TeacherRegistration from '/src/auth/TeacherRegistration.jsx'
+import ClassRegForm from '/src/dashboards/admin/classSection/ClassRegForm.jsx'
 
 ReactModal.setAppElement("#root");
 
@@ -43,18 +43,18 @@ const ClassBody = () => {
 
     return(
         <div className="body-container">
-            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add New Teacher</button>
+            <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Class</button>
             <button className='refreshBtn' onClick={classData}>Refresh</button>
             
             <table>
               <thead>
                 <tr>
-                  <td>Teacher ID</td>
-                  <td>Name</td>
-                  <td>Gender</td>
-                  <td>Subject Comb</td>
-                  <td>Role</td>
-                  <td>Action</td>
+                  <td>Class ID</td>
+                  <td>Class Level</td>
+                  <td>Class Name</td>
+                  <td>Class Teacher</td>
+                  <td>Room Number</td>
+                  <td>Capacity</td>
                 </tr>
               </thead>
 
@@ -63,10 +63,11 @@ const ClassBody = () => {
                 {classRecord.map((item) => 
                   <tr key={item.id}>
                     <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.gender}</td>
-                    <td>{item.class}</td>
+                    <td>{item.level}</td>
                     <td>{item.stream}</td>
+                    <td>{item.teacher}</td>
+                    <td>{item.roomNo}</td>
+                    <td>{item.capacity}</td>
                     <td>
                       <button className='btn btn-primary'>Edit</button>
                       <button className='btn btn-danger'>Delete</button>
@@ -97,16 +98,15 @@ const ClassBody = () => {
                 content: {
                   position: "relative",
                   inset: "unset",
-                  width: "95%",
-                  maxWidth: "100%",
-                  maxHeight: "95vh",
+                  width: "50vw",
+                  // maxWidth: "100%",
                   overflowY: "auto",
-                  padding: "20px",
+                  // padding: "20px",
                   borderRadius: "12px"
                 }
               }}
           >
-            {<TeacherRegistration onClose={() => setRegFormOpen(false)} />}
+            {<ClassRegForm onClose={() => setRegFormOpen(false)} />}
           </ReactModal>
         </div>
     );
