@@ -20,6 +20,7 @@ import ReportCardSection from "/src/dashboards/admin/reportCardSection/ReportCar
 
 // TESTING PATH
 import ClassRegForm from '/src/dashboards/admin/classSection/ClassRegForm.jsx'
+import TeacherDashboard from "/src/dashboards/teacher/TeacherDashboard.jsx";
 
 // STUDENT DASHBOARD IMPORTS
 import MarkSection from '/src/dashboards/student/marksSection/MarksSection.jsx'
@@ -41,6 +42,7 @@ function App() {
         {/* Test Route */}
 
         <Route path="/classReg" element={<ClassRegForm />} />
+        <Route path="/Teacher" element={<TeacherDashboard />} />
 
           <Route path="/" element={< LoginForm />} />
           <Route path="/student" element={<StudentDashboard />}/>
