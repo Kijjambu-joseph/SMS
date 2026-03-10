@@ -1,9 +1,5 @@
 
 
-
-
-
-
 :root{
     --primary-color: #2b3b67; 
     --secondary-color: white;
@@ -24,9 +20,7 @@
     font-family: var(--font-family);
 }
 
-body{
-    font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
-}
+
 
 .Kyu{
     display: flex;
@@ -62,6 +56,7 @@ body{
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 20px;
+    background-color: transparent;
 }
 
 .login-inputs{
