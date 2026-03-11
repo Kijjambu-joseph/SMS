@@ -1,0 +1,85 @@
+:root{
+    --primary-color: #2b3b67; 
+    --secondary-color: white;
+    --other-color:#ebebf1;
+    --bg-main:#e6a210;
+    --text-primary:#f3f5fa;
+    --text-secondary:#090d12;
+    --suplement-color:#1ea344;
+
+    --font-family:"Poppins", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.marks-content{
+    padding:10px;
+    box-shadow:0 0 5px var(--primary-color);
+}
+
+.marks-content h1{
+    font-size: 2rem;
+    font-weight: 600;
+
+    color:var(--primarycolor);
+}
+
+.marks-content form{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+
+}
+
+.marks-content form .filter-set-container{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    /* background-color:red; */
+}
+
+.filter-set-container .filter-set{
+    width:50%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:10px;
+    /* background-color:green */
+}
+
+.filter-set-container .filter-set label{
+    font-size:1rem;
+    color:var(--primary-color);
+}
+
+.filter-set-container .filter-set input{
+    width:100%;
+    height:40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px
+
+}
+
+.filter-set-container .filter-set select{
+    width:100%;
+    height:40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px
+
+}
+
+.filter-set-container button{
+    width:50%;
+    height:40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-bottom:10px;
+    /* background-color:green */
+}

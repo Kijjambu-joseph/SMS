@@ -18,7 +18,7 @@
     height: auto;
     display: grid;
     place-items: center;
-    padding: 20px;
+    /* padding: 10px; */
     /* background-color: rebeccapurple; */
 }
 
@@ -124,16 +124,16 @@
 
 @media screen and (max-width:915px) {
     .Student-reg{
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: grid;
         place-items: center;
-        padding: 20px;
+        /* padding: 20px; */
         /* background-color: rebeccapurple; */
     }
 
     .student-reg-content{
-        width: 90%;
+        width: 100%;
         height: auto;
         /* background-color: red; */
     }
@@ -225,6 +225,21 @@
 }
 
 @media screen and (max-width:414px) {
+
+    .Student-reg{
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+        /* padding: 20px; */
+        /* background-color: rebeccapurple; */
+    }
+
+    .student-reg-content{
+        width: 100%;
+        height: auto;
+        /* background-color: red; */
+    }
      .student-reg-content fieldset legend{
         font-size: 1em;
         font-weight: 600;

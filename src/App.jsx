@@ -34,6 +34,8 @@ import SettingsSection from '/src/dashboards/student/SettingsSection/SettingsSec
 // TEACHER DASHBOARD IMPORTS
 import TeacherAttendanceSection from '/src/dashboards/teacher/AttendanceSection/TeacherAttendanceSection.jsx'
 import TeacherMarksSectionSection from '/src/dashboards/teacher/marksSection/TeacherMarksSection.jsx'
+import TeacherStudentSection from '/src/dashboards/teacher/studentSection/TeacherStudentSection.jsx'
+import TeacherTimetableSection from '/src/dashboards/teacher/timeTableSection/TeacherTimetableSection.jsx'
 
 
 function App() {
@@ -65,8 +67,10 @@ function App() {
           <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>   
 
           {/*TEACHER SECTION ROUTE PATHS  */}
-          <Route path="/teacherAttendance" element={<TeacherAttendanceSection />}/>
-          <Route path="/teacherMarks" element={<TeacherMarksSectionSection />}/>
+          <Route path="/teacher/attendanceSection" element={<TeacherAttendanceSection />}/>
+          <Route path="/teacher/marksSection" element={<TeacherMarksSectionSection />}/>
+          <Route path="/teacher/studentSection" element={<TeacherStudentSection />}/>
+          <Route path="/teacher/timetableSection" element={<TeacherTimetableSection />}/>
 
           {/*STUDENT SECTION ROUTE PATHS  */}
           <Route path="/myMarks" element={<MarkSection />}/>   

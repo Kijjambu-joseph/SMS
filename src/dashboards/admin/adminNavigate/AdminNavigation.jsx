@@ -1,10 +1,11 @@
 import '/src/SideBar.css'
 import Navigation from '/src/Navigation.jsx'
 
+
 function AdminNavigation(){
     return(
         <div>
-            <Navigation to="/admin" NavIcon={<i class="fa-solid fa-house-user" id="admin-icon-side"></i>} NavName="Dashboard" />
+            <Navigation to="/admin" end={true} NavIcon={<i class="fa-solid fa-house-user" id="admin-icon-side"></i>} NavName="Dashboard" />
             <Navigation to='/admin/studentSection' NavIcon={<i class="fa-solid fa-users" id="admin-icon-side"></i>} NavName="Students"/>
             <Navigation to='/admin/teacherSection' NavIcon={<i class="fa-solid fa-person-chalkboard" id="admin-icon-side"></i>} NavName="Teachers"/>
             <Navigation to='/admin/classSection' NavIcon={<i class="fa-solid fa-school" id="admin-icon-side"></i>} NavName="Classes"/>

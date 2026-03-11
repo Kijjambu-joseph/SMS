@@ -65,9 +65,9 @@ const StudentBody = () => {
                   <td>S.1</td>
                   <td>B</td>
                   <td className='action-icons'>
-                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
-                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
-                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
+                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }} title='View Student'></i>
+                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}} title='Edit Student' ></i>
+                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}} title='Delete Student'></i>
                   </td>
 
                 </tr>
@@ -94,9 +94,9 @@ const StudentBody = () => {
                     <td>{item.stream}</td>
                     <td>
                     <td className='action-icons'>
-                      <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
-                      <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
-                      <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
+                      <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }} title='View Student'></i>
+                      <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  title='Edit Student' ></i>
+                      <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}} title='Delete Student'></i>
                     </td>
                     </td>
 
