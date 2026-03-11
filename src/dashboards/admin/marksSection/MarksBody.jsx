@@ -1,4 +1,5 @@
 import '/src/dashboards/admin/marksSection/MarksSection.css'
+import MarksTable from '/src/dashboards/admin/marksSection/MarksTable.jsx';
 
 function MarksBody(){
     return(
@@ -60,7 +61,9 @@ function MarksBody(){
 
                 
             </form>
-            <div></div>
+            <div>
+                <MarksTable/>
+            </div>
         </div>
     );
 }
