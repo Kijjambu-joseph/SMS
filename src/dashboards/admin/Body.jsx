@@ -82,13 +82,11 @@ function Body (){
                   alignItems: "center"
                 },
                 content: {
-                  position: "relative",
                   inset: "unset",
-                  width: "95%",
-                  maxWidth: "100%",
+                  width: "90%",
                   maxHeight: "95vh",
                   overflowY: "auto",
-                  padding: "20px",
+                  // padding: "20px",
                   borderRadius: "12px"
                 }
               }}

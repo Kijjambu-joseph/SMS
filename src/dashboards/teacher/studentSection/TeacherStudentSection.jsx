@@ -1,31 +1,28 @@
-
-import Header from "/src/Header.jsx";
+import Header from "/src/Header";
 // import SideBar from "./SideBar";
-// import AdminCards from "/src/dashboards/admin/adminCards/AdminCards.jsx";
 import ResponsiveHeader from "/src/ResponsiveHeader.jsx";
-import MarksBody from "/src/dashboards/admin/marksSection/MarksBody.jsx";
-import '/src/dashboards/admin/Card.css';
-import AdminSidebar from "/src/dashboards/admin/AdminSidebar.jsx";
+import  StudentBody from "/src/dashboards/teacher/studentSection/StudentBody.jsx";
+import TeacherSidebar from "/src/dashboards/teacher/TeacherSideBar.jsx";
 
 
 
 
 
 
-function MarksSection (){
+function TeacherStudentSection (){
     return(
         <div className="w-full flex gap-2 fixed">
-            <AdminSidebar/>
+            <TeacherSidebar/>
              
             <div className=" w-80/100 flex flex-col  admin-overview" >
                 <Header/>
                 <ResponsiveHeader/>
                  
                 <div className="admin-body-container w-98/100 ">
-                    {/* <AdminCards/> */}
+                   
 
                     <div>
-                      <MarksBody/>
+                      < StudentBody/>
                     </div>
                 </div>
                 
@@ -33,4 +30,4 @@ function MarksSection (){
         </div>
     )
 }
-export default MarksSection;
+export default TeacherStudentSection;

@@ -31,6 +31,12 @@ import ScheduleSection from '/src/dashboards/student/scheduleSection/ScheduleSec
 import HelpSection from "/src/dashboards/student/helpSection/HelpSection.jsx";
 import SettingsSection from '/src/dashboards/student/SettingsSection/SettingsSection.jsx'
 
+// TEACHER DASHBOARD IMPORTS
+import TeacherAttendanceSection from '/src/dashboards/teacher/AttendanceSection/TeacherAttendanceSection.jsx'
+import TeacherMarksSectionSection from '/src/dashboards/teacher/marksSection/TeacherMarksSection.jsx'
+import TeacherStudentSection from '/src/dashboards/teacher/studentSection/TeacherStudentSection.jsx'
+import TeacherTimetableSection from '/src/dashboards/teacher/timeTableSection/TeacherTimetableSection.jsx'
+
 
 function App() {
 
@@ -59,6 +65,12 @@ function App() {
           <Route path="/admin/timetableSection" element={<TimetableSection />}/>      
           <Route path="/admin/settingSection" element={<SettingSection />}/>      
           <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>   
+
+          {/*TEACHER SECTION ROUTE PATHS  */}
+          <Route path="/teacher/attendanceSection" element={<TeacherAttendanceSection />}/>
+          <Route path="/teacher/marksSection" element={<TeacherMarksSectionSection />}/>
+          <Route path="/teacher/studentSection" element={<TeacherStudentSection />}/>
+          <Route path="/teacher/timetableSection" element={<TeacherTimetableSection />}/>
 
           {/*STUDENT SECTION ROUTE PATHS  */}
           <Route path="/myMarks" element={<MarkSection />}/>   
