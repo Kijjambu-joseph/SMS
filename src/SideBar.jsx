@@ -4,6 +4,7 @@ import kyuLogo from '/src/assets/Logo.png'
 import './SideBar.css'
 
 function SideBar ( {role, navigation}){
+   
     return(
         <div className="sidebar">
             <div className="sidebar-logo">
@@ -17,7 +18,7 @@ function SideBar ( {role, navigation}){
             <hr />
 
             <div className="Logout-btn">
-                <h2 className="text-center font-semibold text-2xl">Log out</h2>
+                <button className="text-center font-semibold text-2xl" >Log out</button>
             </div>
 
         

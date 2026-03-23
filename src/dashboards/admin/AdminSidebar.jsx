@@ -1,11 +1,11 @@
 import '/src/SideBar.css';
 
-import SideBar from "./SideBar";
+import SideBar from "/src/SideBar.jsx";
 import { useState } from "react";
 import AdminNavigation from "/src/dashboards/admin/adminNavigate/AdminNavigation.jsx";
 
 function AdminSidebar(){
-    const [role, setRole] = useState("User");
+    const role = localStorage.getItem('newRole')
 
     const handleRoleChange = async () => {
         try{
