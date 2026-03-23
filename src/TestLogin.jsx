@@ -3,39 +3,38 @@ import { useNavigate } from "react-router-dom";
 
 
 function TestLogin(){
-   const [role, setRole] = useState('')
-   const navigate = useNavigate()
 
-   const roles = (roleList) =>{
-        if(roleList === 'Admin'){
-            alert('Loging in as an Admin');
-            setRole('Admin');
-            localStorage.setItem('newRole', 'Admin');
-            navigate('/admin');
-        }else if(roleList === 'Teacher'){
-            alert('Loging in as a Teacher');
-            setRole('Teacher');
-            localStorage.setItem('newRole', 'Teacher');
-            navigate('/teacher')
-        }else if(roleList === 'Student'){
-            alert('Loging in as a Student');
-            setRole('Student')
-            localStorage.setItem('newRole', 'Student');
-            navigate('/student')
-        }else{
-            alert('No Role found')
-        }
-   }
+   const navigate = useNavigate();
 
 
-  
+  const [user, setUser] = useState({userName:'', userRole:''})
 
-   
+  const handleLogin = (userName, userRole) =>{
+    const newUser = {userName, userRole}
+    setUser(newUser)
+    localStorage.setItem('user', JSON.stringify(newUser))
+
+    if(newUser.userRole === 'Admin'){
+      navigate('/admin')
+    }else if(newUser.userRole === 'Teacher'){
+      navigate('/teacher')
+    }else if(newUser.userRole === 'Student'){
+      navigate('/student')
+    }else{
+      alert('No role found')
+    }
+  }
+
+
+
+
     return(
         <div class="login-test-btn">
-            <button onClick={()=> roles('Admin')}>Admin</button>
-            <button onClick={()=> roles('Teacher')}>Teacher</button>
-            <button onClick={()=> roles('Student')}>Student</button>
+            <button onClick={()=> handleLogin('Pasikali', 'Admin')}>Admin</button>
+            <button onClick={()=> handleLogin('Joseph','Teacher')}>Teacher</button>
+            <button onClick={()=> handleLogin('Hassan','Student')}>Student</button>
+
+            <button onClick={() => localStorage.removeItem('user')}>Logout</button>
         </div>
     );
 }
