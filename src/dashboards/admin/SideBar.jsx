@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import kyuLogo from '/src/assets/Logo.png'
-import './SideBar.css'
+import '/src/SideBar.jsx'
 
 function SideBar ( {role, navigation}){
     return(
