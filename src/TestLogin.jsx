@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '/src/SideBar.css'
 
 
 function TestLogin(){
@@ -30,9 +31,9 @@ function TestLogin(){
 
     return(
         <div class="login-test-btn">
-            <button onClick={()=> handleLogin('Pasikali', 'Admin')}>Admin</button>
-            <button onClick={()=> handleLogin('Joseph','Teacher')}>Teacher</button>
-            <button onClick={()=> handleLogin('Hassan','Student')}>Student</button>
+            <button onClick={()=> handleLogin('Pasikali', 'Admin')}>Admin Login</button>
+            <button onClick={()=> handleLogin('Joseph','Teacher')}>Teacher Login</button>
+            <button onClick={()=> handleLogin('Hassan','Student')}>Student Login</button>
 
             <button onClick={() => localStorage.removeItem('user')}>Logout</button>
         </div>
