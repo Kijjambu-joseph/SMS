@@ -37,6 +37,12 @@
     margin-bottom: 20px;
   }
 
+  .sidebar h1, button{
+    color: var(--primary-color);
+  }
+
+  
+
   .sidebar-content{
     display: flex;
     align-items: center;
@@ -45,19 +51,22 @@
     /* background-color: red; */
   }
 
+  
+
 
   .inactive{
     background-color: transparent;
-  }
-
-  .sidebar-content a{
     color: var(--primary-color);
     font-weight: 600;
   }
 
+  /* .sidebar-content a{
+    
+  } */
+
   .dashboard-link{
     width: 100%;
-    background-color: rgb(248, 108, 15);
+    background-color: var(--primary-color);
     color: white;
     padding: 5px 10px;
   }
@@ -68,15 +77,10 @@
 
 
   .sidebar-content i{
-    color: white;
+    color: var(--primary-color);
     font-size: 20px;
   }
 
-  .fa-graduation-cap,
-  .fa-book-open{
-    color: #ffffff;
-    font-size: 20px;
-  }
 
   hr{
     margin-bottom: 10px;
@@ -84,9 +88,21 @@
   }
 
 
-  /* .Logout-btn h2{
-    color: var(--bg-main);
-  } */
+  .Logout-btn{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    /* background-color: red; */
+  }
+
+  .Logout-btn button{
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
 
 
 

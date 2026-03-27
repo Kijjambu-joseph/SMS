@@ -1,9 +1,20 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import kyuLogo from '/src/assets/Logo.png'
 import './SideBar.css'
 
 function SideBar ( {role, navigation}){
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false)
+
+    const logOut = () =>{
+        setLoading(true)
+
+        setTimeout(() =>{
+            localStorage.removeItem('user')
+            navigate('/testLogin', {replace: true})
+        }, 3000)
+    }
    
     return(
         <div className="sidebar">
@@ -18,7 +29,19 @@ function SideBar ( {role, navigation}){
             <hr />
 
             <div className="Logout-btn">
-                <button className="text-center font-semibold text-2xl" >Log out</button>
+                <button onClick={logOut} className="text-center font-semibold text-2xl" disabled={loading} > 
+                    {loading?(
+                        <span className="spinner-container">
+                            <span className="spinner"></span>
+                            Logging out...
+                        </span>
+                    ):(
+                        <div>
+                            <i className="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </div>
+                    )}
+                </button>
             </div>
 
         

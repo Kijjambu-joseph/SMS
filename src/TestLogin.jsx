@@ -34,8 +34,6 @@ function TestLogin(){
             <button onClick={()=> handleLogin('Pasikali', 'Admin')}>Admin Login</button>
             <button onClick={()=> handleLogin('Joseph','Teacher')}>Teacher Login</button>
             <button onClick={()=> handleLogin('Hassan','Student')}>Student Login</button>
-
-            <button onClick={() => localStorage.removeItem('user')}>Logout</button>
         </div>
     );
 }
