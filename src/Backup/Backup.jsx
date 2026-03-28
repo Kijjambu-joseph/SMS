@@ -295,3 +295,19 @@ export default SideBar;
   }
 
   
+  // DASHBOARD PATHS
+
+  <Route path="/student" element={<StudentDashboard />}/>
+          <Route path="/librarian" element={<Libriarian />} />
+          <Route path="/parent" element={<ParentDashboard />}/>
+          <Route path="/admin" element={<AdminDashboard />}/>
+          <Route path="/admin/studentSection" element={<StudentSection />}/>
+          <Route path="/admin/teacherSection" element={<TeacherSection />}/>
+          <Route path="/admin/classSection" element={<ClassSection />}/>
+          <Route path="/RequestToken" element={<ForgotPassword />}/>
+          <Route path="/resetPassword" element={<ResetPassword />}/>
+          <Route path="/admin/marksSection" element={<MarksSection />}/>
+          <Route path="/admin/attendanceSection" element={<AttendanceSection />}/>    
+          <Route path="/admin/timetableSection" element={<TimetableSection />}/>      
+          <Route path="/admin/settingSection" element={<SettingSection />}/>      
+          <Route path="/admin/reportCardSection" element={<ReportCardSection />}/>   
