@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-// import SideBar from "./SideBar";
 import AdminCards from "/src/dashboards/admin/adminCards/AdminCards.jsx";
 import ResponsiveHeader from "./ResponsiveHeader";
 import Body from "./Body";
@@ -33,7 +32,6 @@ function AdminDashboard (){
                 </div>
                 
             </div>
-            <Outlet/>
         </div>
     )
 }

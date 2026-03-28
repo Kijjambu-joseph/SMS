@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import '/src/SideBar.css'
 
 
@@ -14,6 +15,11 @@ function TestLogin(){
     const newUser = {userName, userRole}
     setUser(newUser)
     localStorage.setItem('user', JSON.stringify(newUser))
+
+    Swal.fire({
+      title: "Logged In!",
+      icon: "success",
+    });
 
     if(newUser.userRole === 'Admin'){
       navigate('/admin')

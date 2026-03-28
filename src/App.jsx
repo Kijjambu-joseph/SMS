@@ -75,24 +75,24 @@ function App() {
           <Route path="/admin/marks" element={<MarksSection />} />
           <Route path="/admin/attendance" element={<AttendanceSection />} />
           <Route path="/admin/timetable" element={<TimetableSection />} />
-          <Route path="/admin/settings" element={<SettingSection />} />
-          <Route path="/admin/report-card" element={<ReportCardSection />} />
+          <Route path="/admin/setting" element={<SettingSection />} />
+          <Route path="/admin/reportCard" element={<ReportCardSection />} />
         </Route>
 
 
         {/* PROTECTED PATH FOR TEACHERS ACCESS ONLY */}
         <Route element={<ProtectedRoute allowedRoles={['Teacher']}/>}>
-          <Route path="teacher" element={<TeacherDashboard/>}/>
-          <Route path="teacher/attendance" element={<TeacherAttendanceSection/>}/>
-          <Route path="/teacher/marksSection" element={<TeacherMarksSectionSection />}/>
-          <Route path="/teacher/studentSection" element={<TeacherStudentSection />}/>
-          <Route path="/teacher/timetableSection" element={<TeacherTimetableSection />}/>
+          <Route path="/teacher" element={<TeacherDashboard/>}/>
+          <Route path="/teacher/attendance" element={<TeacherAttendanceSection/>}/>
+          <Route path="/teacher/marks" element={<TeacherMarksSectionSection />}/>
+          <Route path="/teacher/student" element={<TeacherStudentSection />}/>
+          <Route path="/teacher/timetable" element={<TeacherTimetableSection />}/>
         </Route>
 
 
         {/* PROTECTED PATH FOR STUDENTS ACCESS ONLY */}
         <Route element={<ProtectedRoute allowedRoles={['Student']}/>}>
-          <Route path="/student" element={<MarkSection />}/>
+          <Route path="/student" element={<StudentDashboard />}/>
           <Route path="/myMarks" element={<MarkSection />}/>   
           <Route path="/myAttendance" element={<AttendSection />}/>
           <Route path="/myMessages" element={<MessageSection />}/>

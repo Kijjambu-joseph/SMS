@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import kyuLogo from '/src/assets/Logo.png'
 import './SideBar.css'
 
@@ -9,6 +10,12 @@ function SideBar ( {role, navigation}){
 
     const logOut = () =>{
         setLoading(true)
+
+        Swal.fire({
+        title: "Logged Out!",
+        icon: "success",
+        draggable: false
+        });
 
         setTimeout(() =>{
             localStorage.removeItem('user')
