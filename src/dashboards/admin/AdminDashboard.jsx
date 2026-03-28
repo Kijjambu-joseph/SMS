@@ -7,6 +7,7 @@ import Body from "./Body";
 import './Body.css';
 import AdminSidebar from "./AdminSidebar";
 import AdminBarner from '/src/dashboards/admin/AdminBarner.jsx'
+import { Outlet } from "react-router-dom";
 
 
 
@@ -32,6 +33,7 @@ function AdminDashboard (){
                 </div>
                 
             </div>
+            <Outlet/>
         </div>
     )
 }

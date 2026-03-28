@@ -1,9 +1,8 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
-function ProtectedRoute({children, allowedRoles }) {
-   const navigate = useNavigate();
-
+function ProtectedRoute({ allowedRoles }) {
+   
   const userData = localStorage.getItem('user');
   const user = userData ? JSON.parse(userData) : null;
   if(!user){
@@ -11,9 +10,9 @@ function ProtectedRoute({children, allowedRoles }) {
   }
 
   if(allowedRoles && !allowedRoles.includes(user.userRole)){
-    return <Navigate to="/" replace />;
+    return <Navigate to="/" />;
   }
-  return (children)
+  return <Outlet/>;
 }
 
 export default ProtectedRoute
