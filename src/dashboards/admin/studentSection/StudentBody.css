@@ -32,24 +32,48 @@ table {
     /* This is the "magic" line for complete, solid borders */
     border-collapse: collapse; 
     margin-top: 20px;
+    text-align: left;
+    table-layout: auto;
 }
 
-thead td {
+thead tr  {
     border-bottom: 2px solid var(--primary-color);
-    padding: 12px 10px;
-    font-weight: bold;
-    color: #374151;
+    color: var(--primary-color);
 }
 
-tr td {
+tbody tr {
     /* Now this border will look like one continuous line across the row */
-    border-bottom: 1px solid rgb(209, 213, 219); 
-    padding: 12px 10px;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px;
+
+}
+
+tr td{
+    padding: 5px;
 }
 
 /* Optional: Subtle hover to highlight the full row */
 tbody tr:hover {
-    background-color: #f9fafb;
+    background-color: #eeeef1;
+}
+
+tbody button{
+    padding: 2px;
+    border-radius: 8px;
+    color: white;
+}
+
+tbody .view{
+    background-color: green;
+}
+
+tbody .edit{
+    background-color: orange;
+}
+
+tbody .delete{
+    background-color: red;
 }
 
 .action-icons{
@@ -59,5 +83,5 @@ tbody tr:hover {
 }
 
 .action-icons i{
-    font-size:35px;
+    font-size:15px;
 }

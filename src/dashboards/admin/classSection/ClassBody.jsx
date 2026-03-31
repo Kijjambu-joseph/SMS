@@ -9,8 +9,14 @@ ReactModal.setAppElement("#root");
 
 const ClassBody = () => {
     const [regFormOpen, setRegFormOpen] = useState(false);
-    const [classRecord, setClassRecord] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [classRecord, setClassRecord] = useState([
+      {id:'1', identity:'CL001', level:'S.1', class:'S.1A', classTeacher:'TR001', roomNumber:'RM01', capacity:'500'}
+    ]);
+
+    const handleDelete = (id) =>{
+      setClassRecord(prevRecords => prevRecords.filter(classes => classes.id !=id))
+    }
 
     const classData = async () =>{
       try{
@@ -49,12 +55,13 @@ const ClassBody = () => {
             <table>
               <thead>
                 <tr>
-                  <td>Class ID</td>
-                  <td>Class Level</td>
-                  <td>Class Name</td>
-                  <td>Class Teacher</td>
-                  <td>Room Number</td>
-                  <td>Capacity</td>
+                  <th>Class ID</th>
+                  <th>Class Level</th>
+                  <th>Class Name</th>
+                  <th>Class Teacher</th>
+                  <th>Room Number</th>
+                  <th>Capacity</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
 
@@ -62,15 +69,17 @@ const ClassBody = () => {
                 
                 {classRecord.map((item) => 
                   <tr key={item.id}>
-                    <td>{item.id}</td>
+                    <td>{item.identity}</td>
                     <td>{item.level}</td>
-                    <td>{item.stream}</td>
-                    <td>{item.teacher}</td>
-                    <td>{item.roomNo}</td>
+                    <td>{item.class}</td>
+                    <td>{item.classTeacher}</td>
+                    <td>{item.roomNumber}</td>
                     <td>{item.capacity}</td>
-                    <td>
-                      <button className='btn btn-primary'>Edit</button>
-                      <button className='btn btn-danger'>Delete</button>
+                    
+                    <td className='action-icons'>
+                      <button className='view' title='View Student'> <i className="fa-solid fa-eye"></i> View</button>
+                      <button className='edit' title='Edit Student'> <i className="fa-solid fa-pen-to-square"  ></i> Edit</button>
+                      <button className='delete' title='Delete Student' onClick={() =>handleDelete(item.id)}> <i className="fa-regular fa-trash-can" ></i> Delete</button>
                     </td>
 
                   </tr>
