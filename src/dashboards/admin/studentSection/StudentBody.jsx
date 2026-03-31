@@ -8,10 +8,19 @@ ReactModal.setAppElement("#root");
 
 const StudentBody = () => {
     const [regFormOpen, setRegFormOpen] = useState(false);
-    const [studentRecord, setStudentRecord] = useState([]);
+
+    // ACTION BUTTONS
+    const handleDelete = (id) =>{
+      setStudentRecord(prevRecords => prevRecords.filter(student => student.id !== id));
+    }
+
+    const [studentRecord, setStudentRecord] = useState([
+      {id:'1', identity:'ST001', name:'Omolo Pasikali ', gender:'Male', class:'S1', stream:'M'},
+      {id:'2', identity:'ST002', name:'Okoth Pasikali', gender:'Male', class:'S1', stream:'M'}
+    ]);
     const [loading, setLoading] = useState(true)
 
-    const studentData = async () =>{
+    const fetchStudentData = async () =>{
       try{
         setLoading(true)
 
@@ -28,7 +37,7 @@ const StudentBody = () => {
     }
 
     useEffect(() =>{
-      studentData()
+      fetchStudentData()
     }, [])
 
       if(loading) return (
@@ -43,63 +52,36 @@ const StudentBody = () => {
     return(
         <div className="body-container">
             <button className='w-50 h-10 reg-btn' onClick={() => setRegFormOpen(true)} >Add Student</button>
-            <button className='refreshBtn' onClick={studentData}>Refresh</button>
+            <button className='refreshBtn' onClick={fetchStudentData}>Refresh</button>
             
             <table>
               <thead>
                 <tr>
-                  <td>Student ID</td>
-                  <td>Student Name</td>
-                  <td>Gender</td>
-                  <td>Class</td>
-                  <td>Stream</td>
-                  <td>Action</td>
+                  <th>Student ID</th>
+                  <th>Student Name</th>
+                  <th>Gender</th>
+                  <th>Class</th>
+                  <th>Stream</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  <td>ST001</td>
-                  <td>Omolo Pasikali</td>
-                  <td>Male</td>
-                  <td>S.1</td>
-                  <td>B</td>
-                  <td className='action-icons'>
-                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }} title='View Student'></i>
-                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}} title='Edit Student' ></i>
-                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}} title='Delete Student'></i>
-                  </td>
-
-                </tr>
-  
-                <tr>
-                  <td>ST002</td>
-                  <td>Kijjambu Joseph</td>
-                  <td>Male</td>
-                  <td>S.2</td>
-                  <td>A</td>
-                    <td className='action-icons'>
-                    <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }}></i>
-                    <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  ></i>
-                    <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}}></i>
-                  </td>
-                </tr>
                 
                 {studentRecord.map((item) => 
                   <tr key={item.id}>
-                    <td>{item.id}</td>
+                    <td>{item.identity}</td>
                     <td>{item.name}</td>
                     <td>{item.gender}</td>
                     <td>{item.class}</td>
                     <td>{item.stream}</td>
-                    <td>
-                    <td className='action-icons'>
-                      <i className="fa-solid fa-eye" style={{ color: "rgb(66, 201, 66)" }} title='View Student'></i>
-                      <i className="fa-solid fa-pen-to-square" style={{color: "rgb(38, 38, 82)"}}  title='Edit Student' ></i>
-                      <i className="fa-regular fa-trash-can" style={{color: "rgb(255, 6, 6)"}} title='Delete Student'></i>
-                    </td>
-                    </td>
 
+                    <td className='action-icons'>
+                      <button className='view' title='View Student'> <i className="fa-solid fa-eye"></i> View</button>
+                      <button className='edit' title='Edit Student'> <i className="fa-solid fa-pen-to-square"  ></i> Edit</button>
+                      <button className='delete' title='Delete Student' onClick={() =>handleDelete(item.id)}> <i className="fa-regular fa-trash-can" ></i> Delete</button>
+                    </td>
+                    
                   </tr>
 
                 )}

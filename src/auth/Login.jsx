@@ -27,13 +27,6 @@ function LoginForm(){
         
   };
 
-    useEffect(() =>{
-            console.log(LoginData);
-    }, [LoginData])
-
-  
-
-
    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -61,9 +54,7 @@ function LoginForm(){
         setLoading(false);
     };
 
-    useEffect(() =>{
-        console.log({LoginMessage})
-    });
+    
 
     
 
